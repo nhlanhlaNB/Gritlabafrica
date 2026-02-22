@@ -43,14 +43,17 @@
     }
 
     /* ---------- Hero Section ---------- */
-    .hero { min-height:80vh; background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('assets/images/GLAFrontPage.png'); background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; padding-top:60px; }
-    .hero h1 { font-size:3.5rem; font-weight:800; margin-bottom:1rem; font-family:'Montserrat',sans-serif; }
-    .hero-subtitle { font-size:1.2rem; max-width:700px; margin:0 auto; line-height:1.6; }
+    .hero { min-height:80vh; background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('assets/images/GLAFrontPage.png'); background-size:cover; background-position:center; display:flex; align-items:center; color:#fff; padding-top:60px; }
+    .hero .container { display:flex; align-items:center; gap:40px; flex-wrap:wrap; justify-content:flex-start; }
+    .hero-text { flex:0 0 auto; max-width:600px; }
+    .hero h1 { font-size:3.5rem; font-weight:800; margin-bottom:1rem; font-family:'Montserrat',sans-serif; color:#fff; }
+    .hero-subtitle { font-size:1.2rem; max-width:700px; line-height:1.6; color:#fff; }
 
     @media (max-width:768px) {
       .hero { min-height:60vh; padding-top:80px; }
+      .hero .container { flex-direction:column; text-align:center; }
       .hero h1 { font-size:2rem; }
-      .hero-subtitle { font-size:1rem; }
+      .hero-subtitle { font-size:1rem; text-align:center; }
     }
 
     /* ---------- Content Sections ---------- */
@@ -141,9 +144,11 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div>
-      <h1>About GRIT Lab Africa</h1>
-      <p class="hero-subtitle">Building Africa's future through innovation, skills, and grit</p>
+    <div class="container">
+      <div class="hero-text">
+        <h1>About GRIT Lab Africa</h1>
+        <p class="hero-subtitle">Building Africa's future through innovation, skills, and grit</p>
+      </div>
     </div>
   </section>
 

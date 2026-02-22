@@ -102,7 +102,16 @@
     .hero .container {
       position: relative;
       z-index: 1;
-      text-align: center;
+      display:flex;
+      align-items:center;
+      gap:40px;
+      flex-wrap:wrap;
+      justify-content:flex-start;
+    }
+
+    .hero-text {
+      flex:0 0 auto;
+      max-width:600px;
     }
 
     .hero h1 {
@@ -110,7 +119,13 @@
       font-weight: 700;
       margin: 20px 0;
       line-height: 1.2;
-      color: darkgoldenrod;
+      color: #fff;
+    }
+
+    .hero-subtitle {
+      font-size:1.2rem;
+      max-width:600px;
+      color:#fff;
     }
 
     /* ---------- Testimonials Section ---------- */
@@ -402,7 +417,10 @@
   <!-- ═══════════ PAGE HERO ═══════════ -->
   <section class="hero">
     <div class="container">
-      <h1>Awards &amp; Testimonials</h1>
+      <div class="hero-text">
+        <h1>Awards &amp; Testimonials</h1>
+        <p class="hero-subtitle">Celebrating our students' achievements, industry recognition, and the transformative impact of GRIT Lab Africa.</p>
+      </div>
     </div>
   </section>
 
