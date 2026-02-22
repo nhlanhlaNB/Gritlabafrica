@@ -102,7 +102,16 @@
     .hero .container {
       position: relative;
       z-index: 1;
-      text-align: center;
+      display:flex;
+      align-items:center;
+      gap:40px;
+      flex-wrap:wrap;
+      justify-content:flex-start;
+    }
+
+    .hero-text {
+      flex:0 0 auto;
+      max-width:600px;
     }
 
     .hero h1 {
@@ -110,7 +119,13 @@
       font-weight: 700;
       margin: 20px 0;
       line-height: 1.2;
-      color: darkgoldenrod;
+      color: #fff;
+    }
+
+    .hero-subtitle {
+      font-size:1.2rem;
+      max-width:600px;
+      color:#fff;
     }
 
     /* ---------- Testimonials Section ---------- */
@@ -372,7 +387,7 @@
   <!-- Intro overlay -->
   <div class="intro-overlay">
     <img src="assets/images/logo.png" alt="Logo" style="max-height:70px;">
-    <span class="app-name">Showroom GRIT Lab Africa</span>
+    <span class="app-name">GRIT Lab Africa</span>
   </div>
 
   <!-- Header -->
@@ -380,7 +395,7 @@
     <div class="container">
         <div class="logo-container">
             <img src="assets/images/logo.png" alt="Logo" class="logo-img" style="max-height: 50px;">
-            <span class="app-name">Showroom GRITLab Africa</span>
+            <span class="app-name">GRITLab Africa</span>
         </div>
       
         <button type="button" class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
@@ -402,7 +417,10 @@
   <!-- ═══════════ PAGE HERO ═══════════ -->
   <section class="hero">
     <div class="container">
-      <h1>Awards &amp; Testimonials</h1>
+      <div class="hero-text">
+        <h1>Awards &amp; Testimonials</h1>
+        <p class="hero-subtitle">Celebrating our students' achievements, industry recognition, and the transformative impact of GRIT Lab Africa.</p>
+      </div>
     </div>
   </section>
 
@@ -710,11 +728,11 @@
           </div>
           <div class="award-item">
             <h3>WINNER</h3>
-            <p>South Africa's Department of Public Service (DPSA) Ignite Hack Innovation Award 2018</p>
+            <p>African Tech Innovation of the Year Award (Artificial Intelligence category) for the Virtual Reality Courtroom Innovation - Business Tech Africa 2024</p>
           </div>
           <div class="award-item">
             <h3>WINNER</h3>
-            <p>SA Department of Communications Living 4IR Hackathon Overall Best Innovation of 2019</p>
+            <p>African Innovation Hub of the Year - Africa Startup Ecosystem Builders Summit & Awards (ASEB), Accra, Ghana October 2024</p>
           </div>
         </div>
 
@@ -724,12 +742,12 @@
             <i class="fas fa-medal"></i>
           </div>
           <div class="award-item">
-            <h3>TWO-TIME WINNER</h3>
-            <p>UJ Vice-Chancellor's Distinguished Awards for the innovation of the year 2019 (Valued at R500,000.00), and Teacher Excellence</p>
+            <h3>WINNER</h3>
+            <p>Immigrant Ecosystem Builder Champion of the Year - Africa Startup Ecosystem Builders Summit & Awards (ASEB), Accra, Ghana 2024</p>
           </div>
           <div class="award-item">
-            <h3>WINNER</h3>
-            <p>Two South Africa's State IT Agency (SITA) Public Service Innovation Awards in 2019</p>
+            <h3>FINALIST</h3>
+            <p>NSTF-South32 Award (Science Oscars) for Non-Governmental Organisation Award - National Science and Technology Forum of South Africa May 2024</p>
           </div>
         </div>
 
@@ -739,12 +757,12 @@
             <i class="fas fa-star"></i>
           </div>
           <div class="award-item">
-            <h3>2-TIME FINALIST</h3>
-            <p>Africa Tech Leader of the Year Award and Africa Educational Technology Award at the Africa Tech Week Awards, Cape Town, South Africa 2023</p>
+            <h3>WINNER</h3>
+            <p>Africa Impact Award - Deep Learning IndabaX Nigeria 2023</p>
           </div>
           <div class="award-item">
-            <h3>WINNER</h3>
-            <p>Africa Impact Award at the Deep Learning IndabaX N0A 2023</p>
+            <h3>2-TIME FINALIST</h3>
+            <p>Africa Tech Leader of the Year Award and Africa Educational Technology Award - Africa Tech Week Awards, Cape Town, South Africa 2023</p>
           </div>
         </div>
 
@@ -754,8 +772,38 @@
             <i class="fas fa-crown"></i>
           </div>
           <div class="award-item">
+            <h3>TWO-TIME WINNER</h3>
+            <p>UJ Vice-Chancellor's Distinguished Awards for Innovation of the Year 2019 (R500,000) and Teacher Excellence 2020 (R150,000)</p>
+          </div>
+          <div class="award-item">
             <h3>WINNER</h3>
-            <p>Overall Academic Excellence in South Africa at the NCEA Awards in Pretoria, South Africa 2023.</p>
+            <p>Overall Academic Excellence in South Africa - NCEA Awards, Pretoria 2023</p>
+          </div>
+        </div>
+
+        <!-- Award Group 5 -->
+        <div class="award-card">
+          <div class="award-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <div class="award-item">
+            <h3>WINNER</h3>
+            <p>South Africa's Department of Public Service (DPSA) Ignite Hack Innovation Award 2018</p>
+          </div>
+          <div class="award-item">
+            <h3>WINNER</h3>
+            <p>SA Department of Communications Living 4IR Hackathon Overall Best Innovation of 2019</p>
+          </div>
+        </div>
+
+        <!-- Award Group 6 -->
+        <div class="award-card">
+          <div class="award-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="award-item">
+            <h3>TWO-TIME WINNER</h3>
+            <p>South Africa's State IT Agency (SITA) Public Service Innovation Awards 2019 at the GovTech Conference, Durban</p>
           </div>
         </div>
       </div>
@@ -790,7 +838,7 @@
         </div>
       </div>
       <div class="copyright">
-        <p>Showroom GRIT Lab Africa © 2025 All rights reserved.</p>
+        <p>GRIT Lab Africa © 2025 All rights reserved.</p>
       </div>
     </div>
   </footer>

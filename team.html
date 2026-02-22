@@ -66,20 +66,41 @@
     }
 
     .team-hero {
-      padding: 100px 0 40px;
-      background-color: #f9f6f0;
-      text-align: center;
+      min-height:80vh;
+      background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('assets/images/GLAFrontPage.png');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      color:#fff;
+      padding-top:60px;
+    }
+
+    .team-hero .container {
+      display:flex;
+      align-items:center;
+      gap:40px;
+      flex-wrap:wrap;
+      justify-content:flex-start;
+    }
+
+    .team-hero-text {
+      flex:0 0 auto;
+      max-width:600px;
     }
 
     .team-hero h1 {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       margin-bottom: 20px;
+      color:#fff;
+      font-weight:800;
     }
 
     .team-hero p {
       font-size: 1.1rem;
       max-width: 700px;
-      margin: 0 auto 40px;
+      color:#fff;
+      line-height:1.6;
     }
 
     .team-section {
@@ -145,19 +166,8 @@
       position: relative;
     }
 
-    .team-hero {
-      background-image: linear-gradient(rgba(226, 221, 221, 0.7), rgba(226, 221, 221, 0.7)), url('src/img/ShowcaseBackground.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      padding: 100px 20px;
-      text-align: center;
-      color: #000;
-    }
-
     .team-hero .container {
       max-width: 1000px;
-      margin: 0 auto;
     }
 
     .glow::before {
@@ -426,14 +436,14 @@
 
     <div class="intro-overlay">
         <img src="assets/images/logo.png" alt="ECOWAS Logo" class="intro-text" style="max-height: 70px;">
-        <span class="app-name">Showroom GRIT Lab Africa</span>
+        <span class="app-name">GRIT Lab Africa</span>
     </div>
     
     <header>
         <div class="container">
             <div class="logo-container">
                 <img src="assets/images/logo.png" alt="ECOWAS Logo" href="index.html" class="logo-img" style="max-height: 50px;">
-                <span class="app-name">Showroom GRIT Lab Africa</span>
+                <span class="app-name">GRIT Lab Africa</span>
             </div>
           
             <button type="button" class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
@@ -454,8 +464,10 @@
 
     <section class="team-hero">
       <div class="container">
-        <h1>Our Team</h1>
-        <p>Meet the passionate minds driving innovation, collaboration, and real-world impact through every project we undertake.</p>
+        <div class="team-hero-text">
+          <h1>Our Team</h1>
+          <p>Meet the passionate minds driving innovation, collaboration, and real-world impact through every project we undertake.</p>
+        </div>
       </div>
     </section>
 
@@ -583,7 +595,7 @@
           </div>
         </div>
         <div class="copyright">
-          <p>Showroom GRIT Lab Africa © 2025 All rights reserved.</p>
+          <p>GRIT Lab Africa © 2025 All rights reserved.</p>
         </div>
       </div>
     </footer>
