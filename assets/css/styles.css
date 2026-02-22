@@ -4,13 +4,13 @@
 
 /* ---------- CSS Variables ---------- */
 :root {
-  --primary:      #E8591A;   /* GLA orange          */
-  --primary-dark: #C04510;
+  --primary:      darkgoldenrod;   /* GLA golden          */
+  --primary-dark: #b8860b;
   --secondary:    #1B2B3A;   /* deep navy           */
-  --accent:       #F6A623;   /* amber highlight     */
+  --accent:       darkgoldenrod;   /* golden highlight     */
   --green:        #2D9B4E;   /* Africa green        */
-  --light-bg:     #F9F5F0;
-  --text:         #222222;
+  --light-bg:     #f9f6f0;
+  --text:         #000;
   --text-muted:   #666666;
   --white:        #FFFFFF;
   --border:       #E0DDD8;
