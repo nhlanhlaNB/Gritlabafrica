@@ -17,8 +17,10 @@
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family:'Open Sans',sans-serif; color:#222; background:#fff; }
     .container { width:90%; max-width:1200px; margin:0 auto; padding:0 15px; }
-    a { text-decoration:none; color:darkgoldenrod; }
-    ul { list-style:none; }
+    /* ---------- Breadcrumb ---------- */
+    .breadcrumb { font-size:0.9rem; margin-bottom:20px; color:#fff; display:block; text-align:left; }
+    .breadcrumb a { color:#fff; }
+    .breadcrumb span { color:rgba(255,255,255,.6); }
 
     /* ---------- Header ---------- */
     header { position:fixed; width:100%; top:0; left:0; padding:15px 0; z-index:1000; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,.1); }
@@ -146,6 +148,9 @@
   <section class="hero">
     <div class="container">
       <div class="hero-text">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a><span>/</span><span>About</span>
+        </div>
         <h1>About GRIT Lab Africa</h1>
         <p class="hero-subtitle">Building Africa's future through innovation, skills, and grit</p>
       </div>
