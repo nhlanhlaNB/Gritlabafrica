@@ -8,11 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
 
-  <!-- ═══════════ NAVBAR ═══════════ -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo">
@@ -35,242 +36,65 @@
     </div>
   </nav>
 
-  <!-- ═══════════ PAGE HERO ═══════════ -->
+  <!-- HERO -->
   <section class="page-hero">
     <div class="breadcrumb">
       <a href="index.html">Home</a><span>/</span><span>Apply</span>
     </div>
     <h1>Apply to Grit Lab Africa</h1>
-    <p>Take the first step towards a world-class tech career. Applications are free and open to all.</p>
+    <p>Choose a bootcamp below and click Apply to complete your application.</p>
   </section>
 
-  <!-- ═══════════ ELIGIBILITY BAND ═══════════ -->
-  <section style="background:var(--primary);padding:2rem 0;">
+  <!-- COURSES (only these are shown) -->
+  <section class="section-pad" style="background:var(--light-bg);padding:60px 0;min-height:50vh;">
     <div class="container">
-      <div style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;align-items:center;">
-        <div style="color:#fff;text-align:center;">
-          <div style="font-size:1.5rem;font-weight:800;font-family:var(--font-head);">Free</div>
-          <div style="font-size:.82rem;opacity:.8;">No tuition fees</div>
+      <div class="courses-grid" style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;">
+        <div class="course-card" style="background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:2.5rem 2rem;max-width:420px;text-align:center;">
+          <div style="font-size:2.2rem;color:darkgoldenrod;margin-bottom:1rem;"><i class="fa-solid fa-code"></i></div>
+          <h3 style="font-family:var(--font-head);font-weight:800;font-size:1.25rem;margin-bottom:.8rem;">Introduction to Python Programming and Algorithms</h3>
+          <p style="font-size:1rem;color:#444;margin-bottom:1.5rem;">Master foundational programming concepts with Python and essential algorithm design for effective problem solving in various domains.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSciUSl3-FM7N_O_YUxw2OoLv9TRUp1vn4hVm774q47xqfzalg/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;margin-top:.5rem;display:flex;align-items:center;justify-content:center;gap:.5rem;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Apply</a>
         </div>
-        <div style="width:1px;height:40px;background:rgba(255,255,255,.3);"></div>
-        <div style="color:#fff;text-align:center;">
-          <div style="font-size:1.5rem;font-weight:800;font-family:var(--font-head);">18+</div>
-          <div style="font-size:.82rem;opacity:.8;">Age requirement</div>
-        </div>
-        <div style="width:1px;height:40px;background:rgba(255,255,255,.3);"></div>
-        <div style="color:#fff;text-align:center;">
-          <div style="font-size:1.5rem;font-weight:800;font-family:var(--font-head);">Open</div>
-          <div style="font-size:.82rem;opacity:.8;">To all Africans</div>
-        </div>
-        <div style="width:1px;height:40px;background:rgba(255,255,255,.3);"></div>
-        <div style="color:#fff;text-align:center;">
-          <div style="font-size:1.5rem;font-weight:800;font-family:var(--font-head);">Remote</div>
-          <div style="font-size:.82rem;opacity:.8;">Options available</div>
+
+        <div class="course-card" style="background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:2.5rem 2rem;max-width:420px;text-align:center;">
+          <div style="font-size:2.2rem;color:darkgoldenrod;margin-bottom:1rem;"><i class="fa-solid fa-robot"></i></div>
+          <h3 style="font-family:var(--font-head);font-weight:800;font-size:1.25rem;margin-bottom:.8rem;">Artificial Intelligence and Practical Applications in Africa</h3>
+          <p style="font-size:1rem;color:#444;margin-bottom:1.5rem;">Explore practical applications of artificial intelligence tailored for African contexts, solving real-world challenges.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScLEQ8Zar4Mky3jjmCpDtJQfAdcKuQtZ_cNTvleRSfCwEwX9g/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;margin-top:.5rem;display:flex;align-items:center;justify-content:center;gap:.5rem;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Apply</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════ APPLY CONTENT ═══════════ -->
-  <section class="section-pad" style="background:var(--light-bg);">
-    <div class="container">
-      <div class="apply-grid">
-        <!-- Info Column -->
-        <div class="apply-info fade-up">
-          <h3>Why Apply to GLA?</h3>
-          <p>Grit Lab Africa offers one of the continent's most rigorous tech training experiences. We don't just teach — we transform. Our curriculum is built to make you industry-ready from day one.</p>
-          <p style="margin-top:.5rem;">No prior experience is required — just grit, curiosity, and a commitment to show up every day.</p>
-
-          <div class="steps-list" style="margin-top:2rem;">
-            <h3 style="margin-bottom:1rem;">How It Works</h3>
-            <div class="step-item">
-              <div class="step-num">1</div>
-              <div>
-                <h4>Submit Your Application</h4>
-                <p>Fill out the online form — takes less than 10 minutes. No documents needed yet.</p>
-              </div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">2</div>
-              <div>
-                <h4>Online Assessment</h4>
-                <p>Complete a short logical reasoning and motivation assessment at your own pace.</p>
-              </div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">3</div>
-              <div>
-                <h4>Interview</h4>
-                <p>Selected candidates are invited for a brief virtual interview with our admissions team.</p>
-              </div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">4</div>
-              <div>
-                <h4>Offer &amp; Onboarding</h4>
-                <p>Successful applicants receive an offer letter and join our pre-cohort onboarding programme.</p>
-              </div>
-            </div>
-          </div>
-
-          <div style="background:var(--white);border-radius:var(--radius);padding:1.5rem;margin-top:2rem;border:1px solid var(--border);">
-            <h4 style="margin-bottom:.6rem;">📅 Next Cohort Dates</h4>
-            <p style="font-size:.9rem;color:var(--text-muted);">Applications close <strong style="color:var(--primary);">March 31, 2026</strong><br>Cohort begins <strong style="color:var(--secondary);">May 1, 2026</strong></p>
-          </div>
-        </div>
-
-        <!-- Form Column -->
-        <div class="fade-up">
-          <form class="apply-form" id="apply-form" novalidate>
-            <h3>Start Your Application</h3>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fname">First Name *</label>
-                <input type="text" id="fname" name="fname" placeholder="Jane" required />
-              </div>
-              <div class="form-group">
-                <label for="lname">Last Name *</label>
-                <input type="text" id="lname" name="lname" placeholder="Doe" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="+233 20 000 0000" />
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="country">Country *</label>
-                <select id="country" name="country" required>
-                  <option value="">Select your country</option>
-                  <option>Ghana</option>
-                  <option>Nigeria</option>
-                  <option>Kenya</option>
-                  <option>South Africa</option>
-                  <option>Ethiopia</option>
-                  <option>Uganda</option>
-                  <option>Tanzania</option>
-                  <option>Rwanda</option>
-                  <option>Senegal</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="programme">Programme *</label>
-                <select id="programme" name="programme" required>
-                  <option value="">Select programme</option>
-                  <option>Software Engineering</option>
-                  <option>Data &amp; AI</option>
-                  <option>Cybersecurity</option>
-                  <option>Tech Entrepreneurship</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="education">Highest Education Level *</label>
-              <select id="education" name="education" required>
-                <option value="">Select level</option>
-                <option>Secondary / High School</option>
-                <option>Diploma / HND</option>
-                <option>Bachelor's Degree</option>
-                <option>Master's Degree or higher</option>
-                <option>Self-taught / Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="motivation">Why do you want to join GLA? *</label>
-              <textarea id="motivation" name="motivation" placeholder="Tell us about yourself, your goals, and why GLA is right for you..." required></textarea>
-            </div>
-            <div class="form-group">
-              <label for="experience">Any prior tech experience? (optional)</label>
-              <textarea id="experience" name="experience" placeholder="e.g. built a simple website, completed an online course, etc." style="min-height:80px;"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Application →</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section-pad-sm" style="background:var(--white);">
-    <div class="container" style="max-width:760px;">
-      <div class="text-center">
-        <span class="section-label">Got Questions?</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <div class="divider"></div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:1rem;margin-top:2rem;">
-        <div style="background:var(--light-bg);border-radius:var(--radius);padding:1.4rem;" class="fade-up">
-          <h4 style="margin-bottom:.4rem;">Do I need coding experience to apply?</h4>
-          <p style="font-size:.92rem;color:var(--text-muted);">No prior experience is required. We accept learners from all backgrounds. What matters most is your motivation, logical thinking, and willingness to work hard.</p>
-        </div>
-        <div style="background:var(--light-bg);border-radius:var(--radius);padding:1.4rem;" class="fade-up">
-          <h4 style="margin-bottom:.4rem;">Is the programme really free?</h4>
-          <p style="font-size:.92rem;color:var(--text-muted);">Yes. Grit Lab Africa charges no tuition fees. The programme is fully funded by our partners and supporters. You may be required to access a reliable internet connection and computer.</p>
-        </div>
-        <div style="background:var(--light-bg);border-radius:var(--radius);padding:1.4rem;" class="fade-up">
-          <h4 style="margin-bottom:.4rem;">Is the programme online or in-person?</h4>
-          <p style="font-size:.92rem;color:var(--text-muted);">We offer both on-campus (Accra, Lagos, Nairobi) and remote tracks. You can specify your preference in your application.</p>
-        </div>
-        <div style="background:var(--light-bg);border-radius:var(--radius);padding:1.4rem;" class="fade-up">
-          <h4 style="margin-bottom:.4rem;">How competitive is admissions?</h4>
-          <p style="font-size:.92rem;color:var(--text-muted);">We typically accept 10–15% of applicants per cohort. We look for grit, clarity of purpose, and intellectual curiosity — not academic credentials.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════ FOOTER ═══════════ -->
+  <!-- FOOTER (copied from index.html) -->
   <footer>
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo" style="margin-bottom:.3rem;">
-            <div class="logo-icon">GL</div>
-            <div class="logo-text" style="color:#fff;">Grit Lab <span>Africa</span></div>
-          </a>
-          <p>Empowering Africa's next generation of tech talent through rigorous peer-to-peer learning and real-world problem solving.</p>
-          <div class="footer-socials">
-            <a href="#" aria-label="Twitter">𝕏</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Instagram">ig</a>
-            <a href="#" aria-label="YouTube">▶</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
+      <div class="footer-content">
+        <img src="assets/images/logo.png" alt="Logo" class="logo-img" style="max-height: 50px;">
+        <div class="footer-links">
+          <h4>Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About GLA</a></li>
-            <li><a href="apply.html">Apply</a></li>
-            <li><a href="team.html">Our Team</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="Teams.html">Team</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="awards.html">Awards &amp; Testimonials</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="supporters.html">Supporters</a></li>
-          </ul>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>Email: <a href="mailto:info@gritlabafrica.org" style="color: #fff;">info@gritlabafrica.org</a></p>
         </div>
-        <div class="footer-col">
-          <h4>Contact Us</h4>
-          <ul class="footer-contact">
-            <li><span>📍</span> 14 Innovation Drive, Accra, Ghana</li>
-            <li><span>✉️</span> hello@gritlabafrica.org</li>
-            <li><span>📞</span> +233 20 000 0000</li>
-          </ul>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/people/GRIT-Lab-Africa/100090859997203/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@GRITLabAfrica" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/grit-lab-africa/?originalSubdomain=za" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/kingsman_academic_official/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Grit Lab Africa. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Use</a></p>
+      <div class="copyright">
+        <p>Showroom GRIT Lab Africa © 2025 All rights reserved.</p>
       </div>
     </div>
   </footer>
