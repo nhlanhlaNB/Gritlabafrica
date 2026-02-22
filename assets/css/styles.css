@@ -1,4 +1,222 @@
 /* ============================================================
+   SUPPORTERS & PARTNERS PAGE CUSTOM STYLES
+   ============================================================ */
+.supporters-hero {
+  background: linear-gradient(135deg, var(--secondary) 0%, #2C4A62 100%);
+  color: var(--white);
+  padding: 80px 0 70px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.supporters-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--white);
+}
+.supporters-hero .hero-subtitle {
+  color: rgba(255,255,255,.75);
+  font-size: 1.05rem;
+  max-width: 540px;
+  margin: .8rem auto 0;
+}
+
+.partners-row-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.partners-track {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: max-content;
+  animation: supporters-scroll-left-right 60s linear infinite;
+}
+@keyframes supporters-scroll-left-right {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.partner-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.partner-logo-container {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 8px 16px;
+}
+.partner-logo {
+  max-width: 100%;
+  max-height: 44px;
+  object-fit: contain;
+}
+
+.sponsors-section {
+  background: var(--white);
+}
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.sponsor-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.section-title.center,
+.section-subtitle.center {
+  text-align: center;
+}
+.section-title {
+  margin-bottom: 2rem;
+}
+.section-subtitle {
+  margin-bottom: 2rem;
+}
+.contact-supporters {
+  background: var(--light-bg);
+}
+.contact-supporters .container {
+  max-width: 900px;
+}
+.contact-supporters .btn-primary {
+  margin-top: 1.2rem;
+}
+/* ============================================================
+   PUBLICATIONS — SUBSCRIBE & FOOTER CUSTOM STYLES
+   ============================================================ */
+.subscribe-row {
+  display: flex;
+  gap: .8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+.subscribe-input {
+  padding: .75rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  font-family: var(--font-body);
+  font-size: .92rem;
+  min-width: 260px;
+  outline: none;
+}
+.footer-logo-margin {
+  margin-bottom: .3rem;
+}
+.footer-logo-text-white {
+  color: #fff;
+}
+/* ============================================================
+   PUBLICATIONS — KINGS MAN ACADEMIC MAGAZINE CUSTOM STYLES
+   ============================================================ */
+
+.custom-message-section {
+  background: var(--light-bg);
+  padding: 90px 0;
+}
+.custom-message-section .message-content {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+.custom-message-section .logo-display {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.custom-message-section .logo-display img {
+  max-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.split-content-section {
+  padding: 90px 0;
+}
+.split-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.split-content-section .image-column {
+  flex: 0 0 260px;
+  text-align: center;
+}
+.split-content-section .image-column img {
+  max-width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.split-content-section .text-column {
+  flex: 1;
+  min-width: 260px;
+}
+.split-content-section .text-column h2 {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-bottom: .5rem;
+}
+.split-content-section .text-column h3 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: .5rem;
+}
+.split-content-section .text-column p {
+  font-size: 1rem;
+}
+
+.trending-section {
+  background: var(--light-bg);
+  padding: 90px 0;
+}
+.trending-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.trending-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.trend-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 1.2rem;
+  text-align: center;
+}
+.trend-card img {
+  max-width: 120px;
+  margin-bottom: .8rem;
+  border-radius: 6px;
+}
+.trend-card h3 {
+  font-size: 1rem;
+  font-family: var(--font-head);
+  font-weight: 700;
+  margin-bottom: .4rem;
+}
+.trend-card p {
+  font-size: .95rem;
+  color: #444;
+}
+/* ============================================================
    Grit Lab Africa — Main Stylesheet
    ============================================================ */
 
