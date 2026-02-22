@@ -86,7 +86,7 @@
       min-height:60vh;
       background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('assets/images/GLAFrontPage.png');
       background-size:cover; background-position:center;
-      display:flex; align-items:center; position:relative; overflow:hidden;
+      display:flex; align-items:center; position:relative; overflow:hidden; padding-top:100px;
     }
     .hero .container { display:flex; align-items:center; gap:40px; flex-wrap:wrap; }
     .hero-text { flex:1; min-width:300px; color:#fff; }
@@ -98,6 +98,7 @@
       .hero .container { flex-direction:column; text-align:center; }
     }
     @media (max-width:768px) {
+      .hero { padding-top:120px; }
       .hero h1 { font-size:2rem; }
       .hero-subtitle { font-size:1rem; }
     }
