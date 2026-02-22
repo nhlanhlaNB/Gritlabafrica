@@ -1,230 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About GLA — Grit Lab Africa</title>
-  <meta name="description" content="Learn about Grit Lab Africa's mission, vision, values, and history transforming tech education across the continent." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About GRIT Lab Africa</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Site Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Open Sans',sans-serif; color:#222; background:#fff; }
+    .container { width:90%; max-width:1200px; margin:0 auto; padding:0 15px; }
+    a { text-decoration:none; color:darkgoldenrod; }
+    ul { list-style:none; }
+
+    /* ---------- Header ---------- */
+    header { position:fixed; width:100%; top:0; left:0; padding:15px 0; z-index:1000; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,.1); }
+    header .container { display:flex; justify-content:space-between; align-items:center; }
+    .logo-container { display:flex; align-items:center; gap:12px; }
+    .logo-img { height:45px; width:auto; }
+    .app-name { font-size:1.1rem; font-weight:700; color:#000; font-family:'Montserrat',sans-serif; }
+    nav ul { display:flex; align-items:center; gap:25px; }
+    nav a { color:#222; font-weight:500; font-size:13px; transition:color .3s; }
+    nav a:hover, nav a.active { color:darkgoldenrod; }
+    .cta-btn { background:darkgoldenrod; color:#fff !important; padding:10px 20px; border-radius:5px; font-weight:600; transition:background .3s; }
+    .cta-btn:hover { background:#b8860b; }
+    .mobile-toggle { display:none; background:transparent; border:none; color:#000; font-size:24px; cursor:pointer; z-index:1001; }
+
+    @media (max-width:768px) {
+      header { padding:12px 0; }
+      .mobile-toggle { display:block; }
+      nav { position:fixed; top:0; right:-250px; width:250px; height:100vh; background:#fff; transition:right .3s; padding-top:70px; z-index:999; box-shadow:-2px 0 8px rgba(0,0,0,.1); }
+      nav.active { right:0; }
+      nav ul { flex-direction:column; gap:20px; padding:20px; }
+      nav a { display:block; padding:10px 0; }
+    }
+
+    /* ---------- Hero Section ---------- */
+    .hero { min-height:80vh; background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('assets/images/GLAFrontPage.png'); background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; padding-top:60px; }
+    .hero h1 { font-size:3.5rem; font-weight:800; margin-bottom:1rem; font-family:'Montserrat',sans-serif; }
+    .hero-subtitle { font-size:1.2rem; max-width:700px; margin:0 auto; line-height:1.6; }
+
+    @media (max-width:768px) {
+      .hero { min-height:60vh; padding-top:80px; }
+      .hero h1 { font-size:2rem; }
+      .hero-subtitle { font-size:1rem; }
+    }
+
+    /* ---------- Content Sections ---------- */
+    .section { padding:80px 0; }
+    .section.alt-bg { background:#f9f6f0; }
+    .section-title { font-size:2.5rem; font-weight:800; color:#1B2B3A; margin-bottom:2rem; font-family:'Montserrat',sans-serif; text-align:center; }
+    .section-subtitle { font-size:1.1rem; color:#666; line-height:1.8; max-width:900px; margin:0 auto 2rem; }
+
+    /* ---------- About Us Section ---------- */
+    .about-content { max-width:900px; margin:0 auto; line-height:1.8; color:#333; font-size:1rem; }
+    .about-content h3 { font-size:1.8rem; color:#1B2B3A; margin-top:2rem; margin-bottom:1rem; font-family:'Montserrat',sans-serif; font-weight:700; }
+    .about-content p { margin-bottom:1.5rem; }
+
+    /* ---------- Why GLA Grid ---------- */
+    .why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; margin-top:2rem; }
+    .why-card { background:#fff; padding:25px; border-radius:8px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,.08); transition:transform .3s, box-shadow .3s; border-top:4px solid darkgoldenrod; }
+    .why-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,.12); }
+    .why-card h4 { font-size:1.1rem; color:#1B2B3A; margin-bottom:1rem; font-weight:700; }
+    .why-card p { font-size:.9rem; color:#666; line-height:1.6; }
+
+    /* ---------- Stats Grid ---------- */
+    .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:30px; margin:3rem 0; text-align:center; }
+    .stat-box { padding:30px; background:#fff; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.08); }
+    .stat-number { font-size:2.5rem; font-weight:800; color:darkgoldenrod; font-family:'Montserrat',sans-serif; }
+    .stat-label { font-size:.95rem; color:#666; margin-top:0.5rem; }
+
+    /* ---------- Achievements Grid ---------- */
+    .achievements-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:25px; margin-top:2rem; }
+    .achievement-card { background:#fff; padding:30px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.08); }
+    .achievement-icon { font-size:2.5rem; color:darkgoldenrod; margin-bottom:1rem; }
+    .achievement-card h4 { font-size:1.2rem; color:#1B2B3A; margin-bottom:1rem; font-weight:700; }
+    .achievement-card p { font-size:.9rem; color:#666; line-height:1.6; }
+
+    /* ---------- Videos Section ---------- */
+    .videos-section { padding:80px 0; }
+    .videos-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; margin-top:2rem; }
+    .video-item { background:#000; border-radius:8px; overflow:hidden; aspect-ratio:16/9; cursor:pointer; position:relative; }
+    .video-item img { width:100%; height:100%; object-fit:cover; transition:opacity .3s; }
+    .video-item:hover img { opacity:0.8; }
+    .play-overlay { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,.4); opacity:0; transition:opacity .3s; }
+    .video-item:hover .play-overlay { opacity:1; }
+    .play-btn-big { width:60px; height:60px; background:darkgoldenrod; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:24px; }
+
+    /* ---------- Gallery Section ---------- */
+    .gallery-section { padding:80px 0; background:#f9f6f0; }
+    .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; margin-top:2rem; }
+    .gallery-item { border-radius:8px; overflow:hidden; aspect-ratio:1/1; background:#ddd; cursor:pointer; transition:transform .3s; }
+    .gallery-item img { width:100%; height:100%; object-fit:cover; }
+    .gallery-item:hover { transform:scale(1.05); }
+
+    /* ---------- Footer ---------- */
+    footer { background:#1B2B3A; color:#fff; padding:60px 0 20px; }
+    .footer-content { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:40px; margin-bottom:40px; }
+    .footer-links h4, .footer-contact h4, .footer-social h4 { font-size:1.1rem; margin-bottom:20px; color:#fff; font-weight:700; }
+    .footer-links ul li { margin-bottom:10px; }
+    .footer-links a { color:#ccc; transition:color .3s; }
+    .footer-links a:hover { color:darkgoldenrod; }
+    .social-icons { display:flex; gap:15px; }
+    .social-icons a { width:36px; height:36px; background:darkgoldenrod; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; transition:background .3s; }
+    .social-icons a:hover { background:#b8860b; }
+    .copyright { text-align:center; padding-top:20px; border-top:1px solid #333; font-size:.9rem; }
+  </style>
 </head>
 <body>
 
-  <!-- ═══════════ NAVBAR ═══════════ -->
-  <nav class="navbar">
+  <!-- Header -->
+  <header>
     <div class="container">
-      <a href="index.html" class="nav-logo">
-        <div class="logo-icon">GL</div>
-        <div class="logo-text">Grit Lab <span>Africa</span></div>
-      </a>
-      <button class="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About GLA</a></li>
-        <li><a href="team.html">Our Team</a></li>
-        <li><a href="awards.html">Awards &amp; Testimonials</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="supporters.html">Supporters</a></li>
-        <li><a href="apply.html" class="btn-nav">Apply Now</a></li>
-      </ul>
+      <div class="logo-container">
+        <img src="assets/images/logo.png" alt="GRIT Lab Africa Logo" class="logo-img">
+        <span class="app-name">GRIT Lab Africa</span>
+      </div>
+      <button type="button" class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="awards.html">Awards</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="supporters.html">Supporters</a></li>
+          <li><a href="apply.html" class="cta-btn">Apply Now</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- ═══════════ PAGE HERO ═══════════ -->
-  <section class="page-hero">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span>/</span>
-      <span>About GLA</span>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>About GRIT Lab Africa</h1>
+      <p class="hero-subtitle">Building Africa's future through innovation, skills, and grit</p>
     </div>
-    <h1>About Grit Lab Africa</h1>
-    <p>Our story, mission and the values that guide everything we do.</p>
   </section>
 
-  <!-- ═══════════ MISSION & VISION ═══════════ -->
-  <section class="section-pad" style="background:var(--white);">
+  <!-- About Us Section -->
+  <section class="section">
     <div class="container">
-      <div class="text-center">
-        <span class="section-label">Our Purpose</span>
-        <h2 class="section-title">Mission &amp; Vision</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="mission-grid">
-        <div class="mission-card fade-up">
-          <h3>🎯 Our Mission</h3>
-          <p>To democratise access to world-class tech education across Africa by eliminating financial barriers and delivering an intensive, peer-driven curriculum that equips learners with the skills, mindset, and networks needed to thrive in the global digital economy.</p>
-        </div>
-        <div class="mission-card green-top fade-up">
-          <h3>🌍 Our Vision</h3>
-          <p>A continent where any ambitious young African — regardless of background or geography — can access the training and opportunities needed to become a world-class technology professional and leader, driving Africa's digital renaissance.</p>
-        </div>
+      <h2 class="section-title">Our Story</h2>
+      <div class="about-content">
+        <p>GRIT Lab Africa was founded in 2016 by Professor Ade-Ibijola as a social project for training young Africans in grit and programming. Abejide mentors 116 young people across 38 higher institutions of learning in 11 African countries. The Kingsman Academic is an identity that symbolizes a person who is able to transcend the divisions in society, continuously acquire future-fit skills, solve for society using technology, and help others. GRIT Lab Africa is a non-profit program for training such young people across Africa.</p>
+        
+        <h3>Professor Abejide Ade-Ibijola (PhD, Wits)</h3>
+        <p>Founder and driving force behind GRIT Lab Africa, bringing expertise and vision to transform tech education across the continent.</p>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════ OUR STORY ═══════════ -->
-  <section class="section-pad" style="background:var(--light-bg);">
+  <!-- Why GLA Section -->
+  <section class="section alt-bg">
     <div class="container">
-      <div class="text-center">
-        <span class="section-label">Our Journey</span>
-        <h2 class="section-title">How We Started</h2>
-        <div class="divider"></div>
-        <p class="section-sub">From a single room in Accra to a pan-African movement — here's how GLA came to be.</p>
-      </div>
-      <div class="timeline fade-up">
-        <div class="tl-item">
-          <div class="tl-dot">2019</div>
-          <div class="tl-content">
-            <h4>Founded in Accra, Ghana</h4>
-            <p>Grit Lab Africa was founded by a group of passionate technologists who saw first-hand the talent gap across the continent and decided to act.</p>
-          </div>
+      <h2 class="section-title">Why GRIT Lab Africa?</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <h4>Not a Conventional Classroom</h4>
+          <p>Focus on skills needed by the industry in the Fourth Industrial Revolution.</p>
         </div>
-        <div class="tl-item">
-          <div class="tl-dot">2020</div>
-          <div class="tl-content">
-            <h4>First Cohort Graduates</h4>
-            <p>Our inaugural cohort of 24 learners graduated with a 100% project completion rate and 85% job placement within 3 months.</p>
-          </div>
+        <div class="why-card">
+          <h4>Hands-on 4IR Skills Training</h4>
+          <p>Introductory programming, data structures, algorithms, web, mobile, game development, data science, and machine learning.</p>
         </div>
-        <div class="tl-item">
-          <div class="tl-dot">2021</div>
-          <div class="tl-content">
-            <h4>Expansion to Lagos &amp; Nairobi</h4>
-            <p>GLA opened its second and third campuses in Nigeria and Kenya, tripling our annual training capacity.</p>
-          </div>
+        <div class="why-card">
+          <h4>Iron Sharpens Iron</h4>
+          <p>Mentees meet and interact with the brightest minds.</p>
         </div>
-        <div class="tl-item">
-          <div class="tl-dot">2022</div>
-          <div class="tl-content">
-            <h4>Women in Tech Initiative</h4>
-            <p>We launched a dedicated programme to increase female representation in our cohorts, reaching 42% women enrollment.</p>
-          </div>
+        <div class="why-card">
+          <h4>Africa Royalty</h4>
+          <p>United and confident young Africans co-solving with others.</p>
         </div>
-        <div class="tl-item">
-          <div class="tl-dot">2023</div>
-          <div class="tl-content">
-            <h4>African EdTech Award</h4>
-            <p>GLA was recognised as Africa's most impactful edtech organisation by the Pan-African Digital Skills Council.</p>
-          </div>
+        <div class="why-card">
+          <h4>Exposure and Access</h4>
+          <p>To the founder's network in industry and academia.</p>
         </div>
-        <div class="tl-item">
-          <div class="tl-dot">2025</div>
-          <div class="tl-content">
-            <h4>500+ Graduates &amp; Counting</h4>
-            <p>We celebrated our 500th graduate, with alumni now working at leading tech companies across 8 African countries and around the world.</p>
-          </div>
+        <div class="why-card">
+          <h4>Validation</h4>
+          <p>Certification of expertise by the founder, a professor and subject matter expert.</p>
+        </div>
+        <div class="why-card">
+          <h4>Family</h4>
+          <p>Be part of a family across Africa.</p>
+        </div>
+        <div class="why-card">
+          <h4>Employment</h4>
+          <p>Job creation and start-up incubation.</p>
+        </div>
+        <div class="why-card">
+          <h4>Worthiness</h4>
+          <p>Learning, character, GRIT, with consciousness for social impact.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════ VALUES ═══════════ -->
-  <section class="section-pad" style="background:var(--white);">
-    <div class="container text-center">
-      <span class="section-label">What Drives Us</span>
-      <h2 class="section-title">Our Core Values</h2>
-      <div class="divider"></div>
-      <div class="values-grid">
-        <div class="value-card fade-up">
-          <div class="value-emoji">💪</div>
-          <h4>Grit &amp; Resilience</h4>
-          <p>We believe that perseverance and determination matter more than prior experience or privilege.</p>
-        </div>
-        <div class="value-card fade-up">
-          <div class="value-emoji">🤝</div>
-          <h4>Community First</h4>
-          <p>We grow together. Collaboration, mentorship, and peer support are at the heart of our model.</p>
-        </div>
-        <div class="value-card fade-up">
-          <div class="value-emoji">⚡</div>
-          <h4>Excellence</h4>
-          <p>We hold ourselves and our learners to world-class standards — no excuses, no shortcuts.</p>
-        </div>
-        <div class="value-card fade-up">
-          <div class="value-emoji">🔓</div>
-          <h4>Radical Access</h4>
-          <p>Great education should not be locked behind tuition fees. We work to remove every barrier.</p>
-        </div>
-        <div class="value-card fade-up">
-          <div class="value-emoji">🌍</div>
-          <h4>African Pride</h4>
-          <p>We celebrate African identity, culture, and solutions designed in Africa, for Africa and the world.</p>
-        </div>
-        <div class="value-card fade-up">
-          <div class="value-emoji">🔬</div>
-          <h4>Innovation</h4>
-          <p>We constantly iterate on our curriculum and model to stay at the frontier of tech education.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════ CTA ═══════════ -->
-  <section class="cta-band">
+  <!-- What Has GLA Done Section -->
+  <section class="section">
     <div class="container">
-      <h2>Join the GLA Community</h2>
-      <p>Whether you want to learn, mentor, sponsor, or partner — there's a place for you at Grit Lab Africa.</p>
-      <a href="apply.html" class="btn btn-outline">Apply Now →</a>
+      <h2 class="section-title">What Has GRIT Lab Africa Done?</h2>
+      
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-number">2000+</div>
+          <div class="stat-label">Students trained since 2016</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">593</div>
+          <div class="stat-label">Grit-ers across 11 countries</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">R28M+</div>
+          <div class="stat-label">Worth of free training in 2023</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Graduate Employment Rate</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">25</div>
+          <div class="stat-label">Countries Historical Reach</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">38</div>
+          <div class="stat-label">Higher Institutions Reached</div>
+        </div>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="achievement-icon"><i class="fas fa-brain"></i></div>
+          <h4>Smart & Hardworking Youth</h4>
+          <p>Forged the smartest, most hardworking, and persevering young people.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon"><i class="fas fa-briefcase"></i></div>
+          <h4>Reduced Unemployment</h4>
+          <p>Equipped participants with skills for mobile/web pages, video games, etc., with a 100% employment rate.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon"><i class="fas fa-coins"></i></div>
+          <h4>Competitive Salaries</h4>
+          <p>Paid up to R22,000/month for undergraduates and R37,500/month for fresh graduates.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon"><i class="fas fa-handshake"></i></div>
+          <h4>Discipline</h4>
+          <p>Brought back 'old-school' discipline in young Africans.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon"><i class="fas fa-globe"></i></div>
+          <h4>United Community</h4>
+          <p>Created a united community of Africans from diverse backgrounds, races, and cultures.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ═══════════ FOOTER ═══════════ -->
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <div class="container">
+      <h2 class="section-title">Our Journey in Pictures</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="http://127.0.0.1:5502/Assets/images/2023Griters.jpg" alt="Griters of 2023">
+        </div>
+        <div class="gallery-item">
+          <img src="http://127.0.0.1:5502/Assets/images/Team7.jpg" alt="Team Collaboration">
+        </div>
+        <div class="gallery-item">
+          <img src="http://127.0.0.1:5502/Assets/images/Consulting.jpg" alt="Consulting 2025">
+        </div>
+        <div class="gallery-item">
+          <img src="http://127.0.0.1:5502/Assets/images/Chinanews.jpg" alt="Featured on Chinese National News">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo" style="margin-bottom:.3rem;">
-            <div class="logo-icon">GL</div>
-            <div class="logo-text" style="color:#fff;">Grit Lab <span>Africa</span></div>
-          </a>
-          <p>Empowering Africa's next generation of tech talent through rigorous peer-to-peer learning and real-world problem solving.</p>
-          <div class="footer-socials">
-            <a href="#" aria-label="Twitter">𝕏</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Instagram">ig</a>
-            <a href="#" aria-label="YouTube">▶</a>
-          </div>
+      <div class="footer-content">
+        <div>
+          <img src="assets/images/logo.png" alt="Logo" style="max-height: 50px; margin-bottom: 15px;">
         </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
+        <div class="footer-links">
+          <h4>Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About GLA</a></li>
-            <li><a href="apply.html">Apply</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="team.html">Our Team</a></li>
+            <li><a href="awards.html">Awards</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="awards.html">Awards &amp; Testimonials</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="supporters.html">Supporters</a></li>
-          </ul>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>Email: <a href="mailto:info@gritlabafrica.org">info@gritlabafrica.org</a></p>
+          <p>Visit: <a href="http://www.gritlabafrica.org" target="_blank">www.gritlabafrica.org</a></p>
         </div>
-        <div class="footer-col">
-          <h4>Contact Us</h4>
-          <ul class="footer-contact">
-            <li><span>📍</span> 14 Innovation Drive, Accra, Ghana</li>
-            <li><span>✉️</span> hello@gritlabafrica.org</li>
-            <li><span>📞</span> +233 20 000 0000</li>
-          </ul>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/people/GRIT-Lab-Africa/100090859997203/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@GRITLabAfrica" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/grit-lab-africa/?originalSubdomain=za" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/kingsman_academic_official/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Grit Lab Africa. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Use</a></p>
+      <div class="copyright">
+        <p>&copy; 2025 GRIT Lab Africa. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <button id="back-to-top" aria-label="Back to top">↑</button>
-  <script src="assets/js/main.js"></script>
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-toggle').addEventListener('click', () => {
+      document.querySelector('nav').classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('nav').classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>
