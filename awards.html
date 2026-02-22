@@ -85,6 +85,274 @@
     .cookie-reject { background:#666; color:#fff; }
     .cookie-reject:hover { background:#555; }
     @media (max-width:768px) { .cookie-consent { flex-direction:column; align-items:flex-start; gap:15px; } }
+
+    /* ---------- Hero Section ---------- */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('assets/images/GLAFrontPage.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      margin-top: 0;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin: 20px 0;
+      line-height: 1.2;
+      color: darkgoldenrod;
+    }
+
+    /* ---------- Testimonials Section ---------- */
+    .testimonials-section {
+      padding: 4rem 0;
+      background-color: #f9f6f0;
+    }
+
+    .testimonials-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 1rem 0;
+    }
+
+    .testimonials-track {
+      display: flex;
+      gap: 2rem;
+      animation: scroll 40s linear infinite;
+      width: calc(300% + 6rem);
+    }
+
+    .testimonial-card {
+      background: linear-gradient(135deg, #fff 0%, #f9f6f0 100%);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+      width: 100%;
+      max-width: 350px;
+      min-width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      border: 2px solid transparent;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(184, 134, 11, .25);
+      border-color: darkgoldenrod;
+    }
+
+    .testimonial-icon {
+      color: #000;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      display: inline-flex;
+      width: 50px;
+      height: 50px;
+      background: rgba(184, 134, 11, .08);
+      border-radius: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .testimonial-header {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #000;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .testimonial-text {
+      color: #555;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-100% - 2rem));
+      }
+    }
+
+    /* ---------- Awards Section ---------- */
+    .awards-section {
+      position: relative;
+      overflow: hidden;
+      padding: 5rem 0;
+      background: #f9f6f0;
+    }
+
+    .bg-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      display: none;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-header h1 {
+      font-size: 3rem;
+      color: #000;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .section-header div {
+      width: 100px;
+      height: 4px;
+      background: darkgoldenrod;
+      margin: 0 auto;
+    }
+
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .award-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px;
+      border: 2px solid transparent;
+      box-shadow: 0 10px 30px rgba(0,0,0,.1);
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .award-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: darkgoldenrod;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform .3s ease;
+    }
+
+    .award-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(184, 134, 11, .3);
+      border-color: darkgoldenrod;
+    }
+
+    .award-card:hover::before {
+      transform: scaleY(1);
+    }
+
+    .award-icon {
+      font-size: 2.5rem;
+      color: #000;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+    }
+
+    .award-item {
+      margin-bottom: 2rem;
+    }
+
+    .award-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .award-item h3 {
+      color: darkgoldenrod;
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .award-item p {
+      color: #333;
+      line-height: 1.7;
+      font-weight: 400;
+      font-size: .95rem;
+    }
+
+    @media (max-width: 991px) {
+      .hero {
+        min-height: 80vh;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .section-header h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .testimonials-track {
+        animation: scroll 60s linear infinite;
+        gap: 1.5rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .testimonial-card {
+        min-width: 280px;
+        scroll-snap-align: start;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .section-header h1 {
+        font-size: 2rem;
+      }
+      
+      .award-card {
+        padding: 1.5rem;
+      }
+
+      .award-icon {
+        font-size: 2rem;
+      }
+
+      .testimonial-icon {
+        width: 45px;
+        height: 45px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -132,193 +400,362 @@
   </header>
 
   <!-- ═══════════ PAGE HERO ═══════════ -->
-  <section class="page-hero" style="padding-top:100px;">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a><span>/</span><span>Awards &amp; Testimonials</span>
-    </div>
-    <h1>Awards &amp; Testimonials</h1>
-    <p>Recognition of our impact and the stories of people whose lives we've helped change.</p>
-  </section>
-
-  <!-- ═══════════ IMPACT STATS ═══════════ -->
-  <section style="background:var(--secondary);padding:3rem 0;">
+  <section class="hero">
     <div class="container">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2rem;text-align:center;">
-        <div>
-          <div style="font-family:var(--font-head);font-size:2.2rem;font-weight:900;color:var(--accent);" data-count="500" data-suffix="+">0</div>
-          <div style="color:rgba(255,255,255,.6);font-size:.85rem;margin-top:.3rem;">Graduates</div>
-        </div>
-        <div>
-          <div style="font-family:var(--font-head);font-size:2.2rem;font-weight:900;color:var(--accent);" data-count="15" data-suffix="">0</div>
-          <div style="color:rgba(255,255,255,.6);font-size:.85rem;margin-top:.3rem;">Awards Won</div>
-        </div>
-        <div>
-          <div style="font-family:var(--font-head);font-size:2.2rem;font-weight:900;color:var(--accent);" data-count="90" data-suffix="%">0</div>
-          <div style="color:rgba(255,255,255,.6);font-size:.85rem;margin-top:.3rem;">Employment Rate</div>
-        </div>
-        <div>
-          <div style="font-family:var(--font-head);font-size:2.2rem;font-weight:900;color:var(--accent);" data-count="8" data-suffix="">0</div>
-          <div style="color:rgba(255,255,255,.6);font-size:.85rem;margin-top:.3rem;">Countries</div>
-        </div>
-        <div>
-          <div style="font-family:var(--font-head);font-size:2.2rem;font-weight:900;color:var(--accent);" data-count="42" data-suffix="%">0</div>
-          <div style="color:rgba(255,255,255,.6);font-size:.85rem;margin-top:.3rem;">Women in Tech</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════ AWARDS ═══════════ -->
-  <section class="section-pad" style="background:var(--white);">
-    <div class="container">
-      <div class="text-center">
-        <span class="section-label">Recognition</span>
-        <h2 class="section-title">Awards &amp; Accolades</h2>
-        <div class="divider"></div>
-        <p class="section-sub">Our work has been recognised by leading organisations across Africa and beyond.</p>
-      </div>
-      <div class="awards-grid">
-        <div class="award-card fade-up">
-          <div class="award-icon">🏆</div>
-          <h3>African EdTech Award — Best Non-Profit Programme</h3>
-          <p>Awarded by the Pan-African Digital Skills Council for outstanding impact in technology education.</p>
-          <div class="award-year">2025 · Pan-African Digital Skills Council</div>
-        </div>
-        <div class="award-card fade-up">
-          <div class="award-icon">⭐</div>
-          <h3>Top 50 EdTech Organisations Globally</h3>
-          <p>Recognised by HolonIQ among the world's 50 most impactful education technology organisations.</p>
-          <div class="award-year">2024 · HolonIQ</div>
-        </div>
-        <div class="award-card fade-up">
-          <div class="award-icon">🌍</div>
-          <h3>Africa Digital Economy Prize — Social Innovation</h3>
-          <p>Honoured for pioneering a scalable, barrier-free model for tech upskilling across the continent.</p>
-          <div class="award-year">2024 · African Development Bank</div>
-        </div>
-        <div class="award-card fade-up">
-          <div class="award-icon">💡</div>
-          <h3>Youth Employment Innovation Award</h3>
-          <p>Recognised for exceptional contributions to youth employment through digital skills training.</p>
-          <div class="award-year">2023 · ILO Africa</div>
-        </div>
-        <div class="award-card fade-up">
-          <div class="award-icon">🎓</div>
-          <h3>Best Peer-Learning Model — African Higher Ed Forum</h3>
-          <p>Awarded for our innovative curriculum design that centres peer learning and collective intelligence.</p>
-          <div class="award-year">2022 · African Higher Ed Forum</div>
-        </div>
-        <div class="award-card fade-up">
-          <div class="award-icon">🚀</div>
-          <h3>Tech for Good Award — West Africa</h3>
-          <p>Celebrated for using technology as a lever for social inclusion and economic opportunity in West Africa.</p>
-          <div class="award-year">2021 · GSMA Mobile for Development</div>
-        </div>
-      </div>
+      <h1>Awards &amp; Testimonials</h1>
     </div>
   </section>
 
   <!-- ═══════════ TESTIMONIALS ═══════════ -->
-  <section class="section-pad" style="background:var(--light-bg);">
+  <section class="testimonials-section">
     <div class="container">
-      <div class="text-center">
-        <span class="section-label">Alumni Voices</span>
-        <h2 class="section-title">What Our Graduates Say</h2>
-        <div class="divider"></div>
-        <p class="section-sub">Real stories from people who took the leap and transformed their lives through Grit Lab Africa.</p>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testi-card fade-up">
-          <p>"Before GLA, I was a secondary school teacher with a dream of working in tech but no idea where to start. Nine months later, I had a job as a junior developer at a fintech startup in Lagos. GLA changed the trajectory of my entire life."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">EO</div>
-            <div>
-              <div class="testi-name">Emmanuel Ofori</div>
-              <div class="testi-title">Junior Developer, PayFlow Nigeria · Cohort 3</div>
+      <h2 style="text-align: center; margin-bottom: 2rem; color: darkgoldenrod;">What Our Students Say</h2>
+      
+      <div class="testimonials-container">
+        <div class="testimonials-track">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-star"></i>
             </div>
+            <div class="testimonial-header">JBS-GL-090</div>
+            <p class="testimonial-text">"I found it very interesting and motivating, not only for the bootcamp but also for my studies. I'm more motivated than ever to do well and achieve my best."</p>
           </div>
-        </div>
-        <div class="testi-card fade-up">
-          <p>"As a woman, I had been told tech wasn't for me. GLA not only gave me the technical skills but also showed me through its diversity that I belonged. Today I lead a team of engineers. GLA made that possible."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">AK</div>
-            <div>
-              <div class="testi-name">Aisha Kamara</div>
-              <div class="testi-title">Engineering Team Lead, StellarTech Kenya · Cohort 5</div>
+          
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-lightbulb"></i>
             </div>
+            <div class="testimonial-header">JBS-GL-026</div>
+            <p class="testimonial-text">"I enjoyed the whole chapter zero experience. I felt motivated, and I'm excited for everything that is to come."</p>
           </div>
-        </div>
-        <div class="testi-card fade-up">
-          <p>"The peer-learning model at GLA is genius. You're not just absorbing information — you're building, breaking, and rebuilding things with people who push you every single day. It's the hardest and most rewarding experience I've ever had."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">TM</div>
-            <div>
-              <div class="testi-name">Tendai Mutasa</div>
-              <div class="testi-title">Data Engineer, Standard Bank · Cohort 4</div>
+          
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-rocket"></i>
             </div>
+            <div class="testimonial-header">JBS-GL-010</div>
+            <p class="testimonial-text">"The chapter zero itself, I was sold a dream and I bought it."</p>
           </div>
-        </div>
-        <div class="testi-card fade-up">
-          <p>"I came in with zero coding experience and graduated with a job offer that tripled my previous salary. The instructors were real engineers — not academics — and they showed us how to solve actual problems. I'm so grateful."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">BN</div>
-            <div>
-              <div class="testi-name">Blessing Nwosu</div>
-              <div class="testi-title">Backend Engineer, Paystack · Cohort 6</div>
+          
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-sparkles"></i>
             </div>
+            <div class="testimonial-header">JBS-GL-426</div>
+            <p class="testimonial-text">"I really enjoyed Chapter Zero... What was particularly more interesting for me was the student demonstrations as they show the real-life applications of programming... I was inspired to want to pursue my dream of programming."</p>
           </div>
-        </div>
-        <div class="testi-card fade-up">
-          <p>"GLA doesn't just teach you to code — it teaches you how to think, collaborate, and persevere. Those skills have been invaluable in every role I've held since graduating. It gave me confidence I didn't know I had."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">SM</div>
-            <div>
-              <div class="testi-name">Seun Musa</div>
-              <div class="testi-title">Product Engineer, Microsoft Africa · Cohort 2</div>
+          
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-fire"></i>
             </div>
+            <div class="testimonial-header">JBS-GL-453</div>
+            <p class="testimonial-text">"Mind-blowing. It's a must to have Grit/bravado... And to never diminish myself. It was the student's demo and chapter zero itself."</p>
           </div>
-        </div>
-        <div class="testi-card fade-up">
-          <p>"I launched my own cybersecurity company 18 months after graduating from GLA. The network, the skills, and the entrepreneurial mindset I developed there were the foundation of everything. GLA is the real deal."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">KD</div>
-            <div>
-              <div class="testi-name">Kofi Darko</div>
-              <div class="testi-title">Founder, ShieldAfrica Security · Cohort 4</div>
+          
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-code"></i>
             </div>
+            <div class="testimonial-header">JBS-GL-352</div>
+            <p class="testimonial-text">"I loved how students doing my course who are only in the second year are already building 3 games and applications that are being monetized and used in the real world."</p>
+          </div>
+          
+          <!-- Testimonial 7 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-407</div>
+            <p class="testimonial-text">"The chapter 0 event was very impactful. Having such an opportunity made me even more grateful... I'm glad I am part of the team and I am willing to learn and acquire many skills."</p>
+          </div>
+          
+          <!-- Testimonial 8 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-217</div>
+            <p class="testimonial-text">"It was a great experience. Definitely eye-opening on the journey I am about to embark on... I learnt that with hard work and discipline I can achieve much greater than I think I can."</p>
+          </div>
+          
+          <!-- Testimonial 9 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-032</div>
+            <p class="testimonial-text">"It mostly shed light on how much I can improve my skills in a short span of time... Seeing the students show off their work encouraged me to expect more from myself."</p>
+          </div>
+          
+          <!-- Testimonial 10 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-459</div>
+            <p class="testimonial-text">"Had a great time, definitely learnt something... I learnt that being a hard worker pays off."</p>
+          </div>
+
+          <!-- DUPLICATE SET 1 -->
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-090</div>
+            <p class="testimonial-text">"I found it very interesting and motivating, not only for the bootcamp but also for my studies. I'm more motivated than ever to do well and achieve my best."</p>
+          </div>
+          
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-026</div>
+            <p class="testimonial-text">"I enjoyed the whole chapter zero experience. I felt motivated, and I'm excited for everything that is to come."</p>
+          </div>
+          
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-010</div>
+            <p class="testimonial-text">"The chapter zero itself, I was sold a dream and I bought it."</p>
+          </div>
+          
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-sparkles"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-426</div>
+            <p class="testimonial-text">"I really enjoyed Chapter Zero... What was particularly more interesting for me was the student demonstrations as they show the real-life applications of programming... I was inspired to want to pursue my dream of programming."</p>
+          </div>
+          
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-fire"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-453</div>
+            <p class="testimonial-text">"Mind-blowing. It's a must to have Grit/bravado... And to never diminish myself. It was the student's demo and chapter zero itself."</p>
+          </div>
+          
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-352</div>
+            <p class="testimonial-text">"I loved how students doing my course who are only in the second year are already building 3 games and applications that are being monetized and used in the real world."</p>
+          </div>
+          
+          <!-- Testimonial 7 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-407</div>
+            <p class="testimonial-text">"The chapter 0 event was very impactful. Having such an opportunity made me even more grateful... I'm glad I am part of the team and I am willing to learn and acquire many skills."</p>
+          </div>
+          
+          <!-- Testimonial 8 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-217</div>
+            <p class="testimonial-text">"It was a great experience. Definitely eye-opening on the journey I am about to embark on... I learnt that with hard work and discipline I can achieve much greater than I think I can."</p>
+          </div>
+          
+          <!-- Testimonial 9 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-032</div>
+            <p class="testimonial-text">"It mostly shed light on how much I can improve my skills in a short span of time... Seeing the students show off their work encouraged me to expect more from myself."</p>
+          </div>
+          
+          <!-- Testimonial 10 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-459</div>
+            <p class="testimonial-text">"Had a great time, definitely learnt something... I learnt that being a hard worker pays off."</p>
+          </div>
+
+          <!-- DUPLICATE SET 2 -->
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-090</div>
+            <p class="testimonial-text">"I found it very interesting and motivating, not only for the bootcamp but also for my studies. I'm more motivated than ever to do well and achieve my best."</p>
+          </div>
+          
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-026</div>
+            <p class="testimonial-text">"I enjoyed the whole chapter zero experience. I felt motivated, and I'm excited for everything that is to come."</p>
+          </div>
+          
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-010</div>
+            <p class="testimonial-text">"The chapter zero itself, I was sold a dream and I bought it."</p>
+          </div>
+          
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-sparkles"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-426</div>
+            <p class="testimonial-text">"I really enjoyed Chapter Zero... What was particularly more interesting for me was the student demonstrations as they show the real-life applications of programming... I was inspired to want to pursue my dream of programming."</p>
+          </div>
+          
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-fire"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-453</div>
+            <p class="testimonial-text">"Mind-blowing. It's a must to have Grit/bravado... And to never diminish myself. It was the student's demo and chapter zero itself."</p>
+          </div>
+          
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-352</div>
+            <p class="testimonial-text">"I loved how students doing my course who are only in the second year are already building 3 games and applications that are being monetized and used in the real world."</p>
+          </div>
+          
+          <!-- Testimonial 7 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-407</div>
+            <p class="testimonial-text">"The chapter 0 event was very impactful. Having such an opportunity made me even more grateful... I'm glad I am part of the team and I am willing to learn and acquire many skills."</p>
+          </div>
+          
+          <!-- Testimonial 8 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-217</div>
+            <p class="testimonial-text">"It was a great experience. Definitely eye-opening on the journey I am about to embark on... I learnt that with hard work and discipline I can achieve much greater than I think I can."</p>
+          </div>
+          
+          <!-- Testimonial 9 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-032</div>
+            <p class="testimonial-text">"It mostly shed light on how much I can improve my skills in a short span of time... Seeing the students show off their work encouraged me to expect more from myself."</p>
+          </div>
+          
+          <!-- Testimonial 10 -->
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="testimonial-header">JBS-GL-459</div>
+            <p class="testimonial-text">"Had a great time, definitely learnt something... I learnt that being a hard worker pays off."</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════ EMPLOYER QUOTES ═══════════ -->
-  <section class="section-pad-sm" style="background:var(--white);">
+  <!-- ═══════════ AWARDS SECTION ═══════════ -->
+  <section class="awards-section">
+    <div class="bg-animation">
+      <div></div>
+      <div></div>
+    </div>
+    
     <div class="container">
-      <div class="text-center">
-        <span class="section-label">From Employers</span>
-        <h2 class="section-title">What Hiring Partners Say</h2>
-        <div class="divider"></div>
+      <div class="section-header">
+        <h1>AWARDS</h1>
+        <div></div>
       </div>
-      <div class="testimonials-grid" style="margin-top:2.5rem;">
-        <div class="testi-card fade-up" style="background:var(--white);border:1px solid var(--border);">
-          <p>"GLA graduates are some of the most job-ready candidates we've ever hired. They come pre-equipped with problem-solving skills and a collaborative mindset that takes years to develop elsewhere."</p>
-          <div class="testi-author">
-            <div class="testi-avatar" style="background:linear-gradient(135deg,#1b2b3a,#2c4a62);">HR</div>
-            <div>
-              <div class="testi-name">Head of Engineering</div>
-              <div class="testi-title">Leading Pan-African Fintech</div>
-            </div>
+
+      <div class="awards-grid">
+        <!-- Award Group 1 -->
+        <div class="award-card">
+          <div class="award-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="award-item">
+            <h3>WINNER</h3>
+            <p>South Africa's Department of Public Service (DPSA) Ignite Hack Innovation Award 2018</p>
+          </div>
+          <div class="award-item">
+            <h3>WINNER</h3>
+            <p>SA Department of Communications Living 4IR Hackathon Overall Best Innovation of 2019</p>
           </div>
         </div>
-        <div class="testi-card fade-up" style="background:var(--white);border:1px solid var(--border);">
-          <p>"We have hired over 20 GLA graduates in the past 3 years and they consistently outperform peers from traditional universities. GLA is reshaping what tech talent looks like in Africa."</p>
-          <div class="testi-author">
-            <div class="testi-avatar" style="background:linear-gradient(135deg,#4a1942,#8b3a74);">CTO</div>
-            <div>
-              <div class="testi-name">Chief Technology Officer</div>
-              <div class="testi-title">Major African e-Commerce Platform</div>
-            </div>
+
+        <!-- Award Group 2 -->
+        <div class="award-card">
+          <div class="award-icon">
+            <i class="fas fa-medal"></i>
+          </div>
+          <div class="award-item">
+            <h3>TWO-TIME WINNER</h3>
+            <p>UJ Vice-Chancellor's Distinguished Awards for the innovation of the year 2019 (Valued at R500,000.00), and Teacher Excellence</p>
+          </div>
+          <div class="award-item">
+            <h3>WINNER</h3>
+            <p>Two South Africa's State IT Agency (SITA) Public Service Innovation Awards in 2019</p>
+          </div>
+        </div>
+
+        <!-- Award Group 3 -->
+        <div class="award-card">
+          <div class="award-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="award-item">
+            <h3>2-TIME FINALIST</h3>
+            <p>Africa Tech Leader of the Year Award and Africa Educational Technology Award at the Africa Tech Week Awards, Cape Town, South Africa 2023</p>
+          </div>
+          <div class="award-item">
+            <h3>WINNER</h3>
+            <p>Africa Impact Award at the Deep Learning IndabaX N0A 2023</p>
+          </div>
+        </div>
+
+        <!-- Award Group 4 -->
+        <div class="award-card">
+          <div class="award-icon">
+            <i class="fas fa-crown"></i>
+          </div>
+          <div class="award-item">
+            <h3>WINNER</h3>
+            <p>Overall Academic Excellence in South Africa at the NCEA Awards in Pretoria, South Africa 2023.</p>
           </div>
         </div>
       </div>
@@ -405,6 +842,81 @@
         document.getElementById('cookieConsent').classList.add('hidden');
       }
       initCookies();
+
+      /* ---------- Hero slideshow ---------- */
+      // Removed - using static background image instead
+
+      /* ---------- Testimonials track animation ---------- */
+      const track = document.querySelector('.testimonials-track');
+      if (track) {
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
+        let isPaused = false;
+
+        function pauseAnimation() {
+          if (isPaused) return;
+          track.style.animationPlayState = 'paused';
+          isPaused = true;
+        }
+
+        function resumeAnimation() {
+          if (!isPaused) return;
+          setTimeout(() => {
+            track.style.animationPlayState = 'running';
+            isPaused = false;
+          }, 3000);
+        }
+
+        track.addEventListener('mousedown', (e) => {
+          isDragging = true;
+          startX = e.pageX - track.offsetLeft;
+          scrollLeft = track.scrollLeft;
+          pauseAnimation();
+          track.style.cursor = 'grabbing';
+        });
+
+        track.addEventListener('touchstart', (e) => {
+          isDragging = true;
+          startX = e.touches[0].pageX - track.offsetLeft;
+          scrollLeft = track.scrollLeft;
+          pauseAnimation();
+          track.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('mouseup', () => {
+          if (!isDragging) return;
+          isDragging = false;
+          track.style.cursor = 'grab';
+          resumeAnimation();
+        });
+
+        document.addEventListener('touchend', () => {
+          if (!isDragging) return;
+          isDragging = false;
+          track.style.cursor = 'grab';
+          resumeAnimation();
+        });
+
+        document.addEventListener('mousemove', (e) => {
+          if (!isDragging) return;
+          e.preventDefault();
+          const x = e.pageX - track.offsetLeft;
+          const walk = (x - startX) * 2;
+          track.scrollLeft = scrollLeft - walk;
+        });
+
+        track.addEventListener('touchmove', (e) => {
+          if (!isDragging) return;
+          e.preventDefault();
+          const x = e.touches[0].pageX - track.offsetLeft;
+          const walk = (x - startX) * 2;
+          track.scrollLeft = scrollLeft - walk;
+        });
+
+        track.addEventListener('mouseenter', pauseAnimation);
+        track.addEventListener('mouseleave', resumeAnimation);
+      }
     });
   </script>
 </body>
