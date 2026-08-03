@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,13 @@
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 <body>
 
   <!-- Cookie Consent Bar -->
@@ -34,122 +38,487 @@
   <!-- Header -->
   <header>
     <div class="container">
-        <div class="logo-container">
-            <img src="assets/images/logo.png" alt="ECOWAS Logo" class="logo-img" style="max-height: 50px;">
-            <span class="app-name">GRITLab Africa</span>
-        </div>
-      
-        <button type="button" class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
-        <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About GLA</a></li>
-              <li><a href="team.html">Our Team</a></li>
-              <li><a href="awards.html">Awards &amp; Testimonials</a></li>
-              <li><a href="media.html">Media</a></li>
-              <li><a href="publications.html" class="active">Publications</a></li>
-              <li><a href="supporters.html">Supporters</a></li>
-              <li><a href="apply.html" class="cta-btn">Apply Now</a></li>
-            </ul>
-        </nav>
+      <div class="logo-container">
+        <img src="assets/images/logo.png" alt="ECOWAS Logo" class="logo-img" style="max-height: 50px;">
+        <span class="app-name">GRITLab Africa</span>
+      </div>
+
+      <button type="button" class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About GLA</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="awards.html">Awards &amp; Testimonials</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="publications.html" class="active">Publications</a></li>
+          <li><a href="supporters.html">Supporters</a></li>
+          <li><a href="apply.html" class="cta-btn">Apply Now</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Montserrat',sans-serif; color:#000; }
-    .container { width:90%; max-width:1600px; margin:0 auto; padding:0 15px; }
-    a { text-decoration:none; color:#000; }
-    ul { list-style:none; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    ul {
+      list-style: none;
+    }
 
     /* ---------- Header ---------- */
-    header { position:fixed; width:100%; top:0; left:0; padding:15px 0; z-index:1000; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,.1); }
-    header .container { display:flex; justify-content:space-between; align-items:center; }
-    .logo-container { display:flex; align-items:center; gap:12px; }
-    .logo-img { height:45px; width:auto; }
-    .app-name { font-size:1.1rem; font-weight:700; color:#000; font-family:'Montserrat',sans-serif; }
-    nav ul { display:flex; align-items:center; gap:25px; }
-    nav ul li a { color:#222; font-weight:700; font-size:13px; transition:color .3s; }
-    nav ul li a.active, nav ul li a:hover { color:darkgoldenrod; }
-    .cta-btn { background:darkgoldenrod; color:#fff !important; padding:10px 20px; border-radius:5px; font-weight:600; transition:background .3s; }
-    .cta-btn:hover { background:#b8860b; }
-    .mobile-toggle { display:none; background:transparent; border:none; color:#000; font-size:24px; cursor:pointer; z-index:1001; }
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 15px 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      height: 45px;
+      width: auto;
+    }
+
+    .app-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #000;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #222;
+      font-weight: 700;
+      font-size: 13px;
+      transition: color .3s;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      color: darkgoldenrod;
+    }
+
+    .cta-btn {
+      background: darkgoldenrod;
+      color: #fff !important;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background .3s;
+    }
+
+    .cta-btn:hover {
+      background: #b8860b;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: #000;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 1001;
+    }
 
     /* ---------- Mobile Nav ---------- */
     @media (max-width:768px) {
-      header { padding:12px 0; }
-      .mobile-toggle { display:block; }
-      nav { position:fixed; top:0; right:-250px; width:250px; height:100vh; background:#fff; transition:right .3s; padding-top:70px; z-index:999; box-shadow:-2px 0 8px rgba(0,0,0,.1); }
-      nav.active { right:0; }
-      nav ul { flex-direction:column; gap:20px; padding:20px; }
-      nav ul li a { display:block; padding:10px 0; }
+      header {
+        padding: 12px 0;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #fff;
+        transition: right .3s;
+        padding-top: 70px;
+        z-index: 999;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, .1);
+      }
+
+      nav.active {
+        right: 0;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 10px 0;
+      }
     }
 
     /* ---------- Intro Overlay ---------- */
-    .intro-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.8);
-                     display:flex; align-items:center; justify-content:center; z-index:2000;
-                     backdrop-filter:blur(10px); opacity:1; transition:opacity .5s ease; flex-direction:column; gap:20px; }
-    .intro-overlay.hide { opacity:0; pointer-events:none; }
-    .intro-text { font-size:4rem; font-weight:900; color:#000; text-transform:uppercase;
-                  letter-spacing:2px; text-shadow:0 0 15px rgba(255,215,0,.8),0 0 30px rgba(255,215,0,.6);
-                  animation:pulse 1.5s ease-in-out infinite; }
-    @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.05);opacity:.9} }
-    @media (max-width:768px) { .intro-text { font-size:2.5rem; } }
+    .intro-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      backdrop-filter: blur(10px);
+      opacity: 1;
+      transition: opacity .5s ease;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-    /* ---------- Footer ---------- */
-    footer { background:#111; color:#fff; padding:60px 0 20px; }
-    .footer-content { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:40px; margin-bottom:40px; }
-    .footer-links h4, .footer-contact h4, .footer-social h4 { font-size:1.2rem; margin-bottom:20px; color:#fff; }
-    .footer-links ul li { margin-bottom:10px; }
-    .footer-links ul li a { color:#fff; transition:color .3s; }
-    .footer-links ul li a:hover { color:darkgoldenrod; }
-    .social-icons { display:flex; gap:15px; }
-    .social-icons a { color:#000; background:#fff; width:36px; height:36px; border-radius:50%;
-                      display:flex; align-items:center; justify-content:center; transition:bg .3s; }
-    .social-icons a:hover { background:darkgoldenrod; color:#fff; }
-    .copyright { text-align:center; padding-top:20px; border-top:1px solid #333; font-size:.9rem; }
+    .intro-overlay.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
 
-    /* ---------- Cookie Consent Bar ---------- */
-    .cookie-consent { position:fixed; bottom:0; left:0; width:100%; background:#222; color:#fff; padding:20px;
-                      display:flex; justify-content:space-between; align-items:center; z-index:999;
-                      box-shadow:0 -2px 10px rgba(0,0,0,.3); font-size:.9rem; gap:20px; }
-    .cookie-consent.hidden { display:none; }
-    .cookie-consent-text { flex:1; }
-    .cookie-consent-text a { color:darkgoldenrod; text-decoration:underline; }
-    .cookie-consent-buttons { display:flex; gap:10px; flex-wrap:wrap; }
-    .cookie-btn { padding:10px 20px; border:none; border-radius:5px; cursor:pointer; font-weight:600;
-                  transition:all .3s; }
-    .cookie-accept { background:darkgoldenrod; color:#fff; }
-    .cookie-accept:hover { background:#b8860b; }
-    .cookie-reject { background:#666; color:#fff; }
-    .cookie-reject:hover { background:#555; }
-    @media (max-width:768px) { .cookie-consent { flex-direction:column; align-items:flex-start; gap:15px; } }
+    .intro-text {
+      font-size: 4rem;
+      font-weight: 900;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 15px rgba(255, 215, 0, .8), 0 0 30px rgba(255, 215, 0, .6);
+      animation: pulse 1.5s ease-in-out infinite;
+    }
 
-    /* ---------- Intro Overlay ---------- */
-    .intro-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.8);
-                     display:flex; align-items:center; justify-content:center; z-index:2000;
-                     backdrop-filter:blur(10px); opacity:1; transition:opacity .5s ease; flex-direction:column; gap:20px; }
-    .intro-overlay.hide { opacity:0; pointer-events:none; }
-    .intro-text { font-size:4rem; font-weight:900; color:#000; text-transform:uppercase;
-                  letter-spacing:2px; text-shadow:0 0 15px rgba(255,215,0,.8),0 0 30px rgba(255,215,0,.6);
-                  animation:pulse 1.5s ease-in-out infinite; }
-    @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.05);opacity:.9} }
-    @media (max-width:768px) { .intro-text { font-size:2.5rem; } }
+    @keyframes pulse {
 
-    /* ---------- Hero Section ---------- */
-    .page-hero { min-height:60vh; background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('assets/images/GLAFrontPage.png'); background-size:cover; background-position:center; display:flex; align-items:center; justify-content:flex-start; color:#fff; margin-top:90px; padding-left:0; }
-    .page-hero .container { display:flex; align-items:center; gap:40px; flex-wrap:wrap; justify-content:flex-start; width:100%; }
-    .hero-text { flex:1; min-width:300px; max-width:600px; }
-    .page-hero h1 { font-size:3.5rem; font-weight:800; margin-bottom:1rem; font-family:'Montserrat',sans-serif; color:#fff; }
-    .page-hero .hero-subtitle { font-size:1.2rem; max-width:700px; line-height:1.6; color:#fff; }
-    .breadcrumb { font-size:0.9rem; margin-bottom:20px; color:#fff; }
-    .breadcrumb a { color:#fff; }
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1
+      }
+
+      50% {
+        transform: scale(1.05);
+        opacity: .9
+      }
+    }
 
     @media (max-width:768px) {
-      .page-hero { min-height:60vh; }
-      .page-hero .container { flex-direction:column; text-align:center; }
-      .page-hero h1 { font-size:2rem; }
-      .page-hero .hero-subtitle { font-size:1rem; text-align:center; }
+      .intro-text {
+        font-size: 2.5rem;
+      }
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 60px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-links h4,
+    .footer-contact h4,
+    .footer-social h4 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .footer-links ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+      color: #fff;
+      transition: color .3s;
+    }
+
+    .footer-links ul li a:hover {
+      color: darkgoldenrod;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: #000;
+      background: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: bg .3s;
+    }
+
+    .social-icons a:hover {
+      background: darkgoldenrod;
+      color: #fff;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      font-size: .9rem;
+    }
+
+    /* ---------- Cookie Consent Bar ---------- */
+    .cookie-consent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, .3);
+      font-size: .9rem;
+      gap: 20px;
+    }
+
+    .cookie-consent.hidden {
+      display: none;
+    }
+
+    .cookie-consent-text {
+      flex: 1;
+    }
+
+    .cookie-consent-text a {
+      color: darkgoldenrod;
+      text-decoration: underline;
+    }
+
+    .cookie-consent-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .cookie-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all .3s;
+    }
+
+    .cookie-accept {
+      background: darkgoldenrod;
+      color: #fff;
+    }
+
+    .cookie-accept:hover {
+      background: #b8860b;
+    }
+
+    .cookie-reject {
+      background: #666;
+      color: #fff;
+    }
+
+    .cookie-reject:hover {
+      background: #555;
+    }
+
+    @media (max-width:768px) {
+      .cookie-consent {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+    }
+
+    /* ---------- Intro Overlay ---------- */
+    .intro-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      backdrop-filter: blur(10px);
+      opacity: 1;
+      transition: opacity .5s ease;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .intro-overlay.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .intro-text {
+      font-size: 4rem;
+      font-weight: 900;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 15px rgba(255, 215, 0, .8), 0 0 30px rgba(255, 215, 0, .6);
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1
+      }
+
+      50% {
+        transform: scale(1.05);
+        opacity: .9
+      }
+    }
+
+    @media (max-width:768px) {
+      .intro-text {
+        font-size: 2.5rem;
+      }
+    }
+
+    /* ---------- Hero Section ---------- */
+    .page-hero {
+      min-height: 60vh;
+      background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('assets/images/GLAFrontPage.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: #fff;
+      margin-top: 90px;
+      padding-left: 0;
+    }
+
+    .page-hero .container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+    }
+
+    .page-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+    }
+
+    .page-hero .hero-subtitle {
+      font-size: 1.2rem;
+      max-width: 700px;
+      line-height: 1.6;
+      color: #fff;
+    }
+
+    .breadcrumb {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .breadcrumb a {
+      color: #fff;
+    }
+
+    @media (max-width:768px) {
+      .page-hero {
+        min-height: 60vh;
+      }
+
+      .page-hero .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .page-hero h1 {
+        font-size: 2rem;
+      }
+
+      .page-hero .hero-subtitle {
+        font-size: 1rem;
+        text-align: center;
+      }
     }
   </style>
 
@@ -162,7 +531,8 @@
           <a href="index.html">Home</a><span>/</span><span>About</span>
         </div>-->
         <h1>Publications</h1>
-        <p class="hero-subtitle">Introducing the Kingsman Academic Magazine, a personal publication that serves as a testament to the impactful work carried out by the GRIT Lab Africa.</p>
+        <p class="hero-subtitle">Introducing the Kingsman Academic Magazine, a personal publication that serves as a
+          testament to the impactful work carried out by the GRIT Lab Africa.</p>
       </div>
     </div>
   </section>
@@ -171,7 +541,10 @@
     <div class="container">
       <div class="message-content">
         <p>
-          This magazine, functioning akin to a diary or personal journal, showcases the results of GRIT Lab Africa's mission: mentoring and pro-bono skills training for young Africans in technology. While not representing the views of any institution other than GRIT Lab Africa, the Kingsman Academic Magazine aims to share a comprehensive portfolio of skills training and outcomes across various disciplines.
+          This magazine, functioning akin to a diary or personal journal, showcases the results of GRIT Lab Africa's
+          mission: mentoring and pro-bono skills training for young Africans in technology. While not representing the
+          views of any institution other than GRIT Lab Africa, the Kingsman Academic Magazine aims to share a
+          comprehensive portfolio of skills training and outcomes across various disciplines.
         </p>
       </div>
       <div class="logo-display">
@@ -190,9 +563,14 @@
           <h2>THE KINGSMAN ACADEMIC</h2>
           <h3>The Kingsman Academic Magazine 2023</h3>
           <p>
-            The first edition of the Kingsman Academic Magazine provides a compelling glimpse into the visionary founder's mission to upskill the African youth with tech expertise, character, and a sense of identity.
-            Explore the impact of Grit Lab Africa's free mentoring programs, the outcomes of the ETDP-SETA initiative, and the exclusive feature on the Kingsman Academic's role in the launch of the National Artificial Intelligence Institute of South Africa. Dive into applied research, intellectual property development, and the exciting world of tech with #Firepower, featuring the latest devices from servers to drones.
-            Uncover 20 tech upskilling programs and join the journey of innovation and empowerment in this captivating debut issue.
+            The first edition of the Kingsman Academic Magazine provides a compelling glimpse into the visionary
+            founder's mission to upskill the African youth with tech expertise, character, and a sense of identity.
+            Explore the impact of Grit Lab Africa's free mentoring programs, the outcomes of the ETDP-SETA initiative,
+            and the exclusive feature on the Kingsman Academic's role in the launch of the National Artificial
+            Intelligence Institute of South Africa. Dive into applied research, intellectual property development, and
+            the exciting world of tech with #Firepower, featuring the latest devices from servers to drones.
+            Uncover 20 tech upskilling programs and join the journey of innovation and empowerment in this captivating
+            debut issue.
           </p>
         </div>
       </div>
@@ -242,14 +620,19 @@
         <div class="footer-contact">
           <h4>Contact</h4>
           <p>Email: <a href="mailto:info@gritlabafrica.org" style="color: #fff;">info@gritlabafrica.org</a></p>
+          <p style="margin-top: 8px;">24 Ditton Ave, Auckland Park, Johannesburg, 2092</p>
         </div>
         <div class="footer-social">
           <h4>Follow Us</h4>
           <div class="social-icons">
-            <a href="https://www.facebook.com/people/GRIT-Lab-Africa/100090859997203/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.youtube.com/@GRITLabAfrica" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.linkedin.com/company/grit-lab-africa/?originalSubdomain=za" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/kingsman_academic_official/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/people/GRIT-Lab-Africa/100090859997203/" target="_blank"
+              title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@GRITLabAfrica" target="_blank" title="YouTube"><i
+                class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/grit-lab-africa/?originalSubdomain=za" target="_blank"
+              title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/kingsman_academic_official/" target="_blank" title="Instagram"><i
+                class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
@@ -284,7 +667,7 @@
         document.addEventListener('click', e => {
           if (!nav.contains(e.target) && e.target !== toggle && nav.classList.contains('active')) {
             nav.classList.remove('active');
-            toggle.querySelector('i').classList.replace('fa-times','fa-bars');
+            toggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
           }
         });
       }
@@ -297,11 +680,11 @@
           cookieConsent.classList.add('hidden');
         }
       }
-      window.acceptCookies = function() {
+      window.acceptCookies = function () {
         localStorage.setItem('cookiesAccepted', 'true');
         document.getElementById('cookieConsent').classList.add('hidden');
       }
-      window.rejectCookies = function() {
+      window.rejectCookies = function () {
         localStorage.setItem('cookiesAccepted', 'false');
         document.getElementById('cookieConsent').classList.add('hidden');
       }
@@ -309,4 +692,5 @@
     });
   </script>
 </body>
+
 </html>

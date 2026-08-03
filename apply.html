@@ -1,110 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apply — Grit Lab Africa</title>
-  <meta name="description" content="Apply to Grit Lab Africa's intensive tech training programmes. No tuition fees. Open to all ambitious Africans." />
+  <meta name="description"
+    content="Apply to Grit Lab Africa's intensive tech training programmes. No tuition fees. Open to all ambitious Africans." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/styles.css" />
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Montserrat',sans-serif; color:#000; }
-    .container { width:90%; max-width:1600px; margin:0 auto; padding:0 15px; }
-    a { text-decoration:none; color:#000; }
-    ul { list-style:none; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    ul {
+      list-style: none;
+    }
 
     /* ---------- Header ---------- */
-    header { position:fixed; width:100%; top:0; left:0; padding:15px 0; z-index:1000; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,.1); }
-    header .container { display:flex; justify-content:space-between; align-items:center; }
-    .logo-container { display:flex; align-items:center; gap:12px; }
-    .logo-img { height:45px; width:auto; }
-    .app-name { font-size:1.1rem; font-weight:700; color:#000; font-family:'Montserrat',sans-serif; }
-    nav ul { display:flex; align-items:center; gap:25px; }
-    nav ul li a { color:#222; font-weight:700; font-size:13px; transition:color .3s; }
-    nav ul li a.active, nav ul li a:hover { color:darkgoldenrod; }
-    .cta-btn { background:darkgoldenrod; color:#fff !important; padding:10px 20px; border-radius:5px; font-weight:600; transition:background .3s; }
-    .cta-btn:hover { background:#b8860b; }
-    .mobile-toggle { display:none; background:transparent; border:none; color:#000; font-size:24px; cursor:pointer; z-index:1001; }
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 15px 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      height: 45px;
+      width: auto;
+    }
+
+    .app-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #000;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #222;
+      font-weight: 700;
+      font-size: 13px;
+      transition: color .3s;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      color: darkgoldenrod;
+    }
+
+    .cta-btn {
+      background: darkgoldenrod;
+      color: #fff !important;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background .3s;
+    }
+
+    .cta-btn:hover {
+      background: #b8860b;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: #000;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 1001;
+    }
 
     /* ---------- Mobile Nav ---------- */
     @media (max-width:768px) {
-      header { padding:12px 0; }
-      .mobile-toggle { display:block; }
-      nav { position:fixed; top:0; right:-250px; width:250px; height:100vh; background:#fff; transition:right .3s; padding-top:70px; z-index:999; box-shadow:-2px 0 8px rgba(0,0,0,.1); }
-      nav.active { right:0; }
-      nav ul { flex-direction:column; gap:20px; padding:20px; }
-      nav ul li a { display:block; padding:10px 0; }
+      header {
+        padding: 12px 0;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #fff;
+        transition: right .3s;
+        padding-top: 70px;
+        z-index: 999;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, .1);
+      }
+
+      nav.active {
+        right: 0;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 10px 0;
+      }
     }
 
     /* ---------- Hero Section ---------- */
-    .page-hero { min-height:60vh; background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('assets/images/GLAFrontPage.png');
-                 background-size:cover; background-position:center; display:flex; align-items:flex-start; color:#fff;
-                 margin-top:90px; flex-direction:column; justify-content:flex-start; }
-    .page-hero .breadcrumb { font-size:0.9rem; margin-bottom:20px; color:#fff; display:block; text-align:left; }
-    .page-hero .breadcrumb a { color:#fff; }
-    .page-hero .breadcrumb span { color:rgba(255,255,255,.6); }
-    .page-hero h1 { font-size:3.5rem; font-weight:800; margin-bottom:1rem; color:#fff; text-align:left; }
-    .page-hero p { font-size:1.2rem; max-width:700px; color:#fff; text-align:left; width:100%; }
-    @media (max-width:768px) { .page-hero { min-height:60vh; } .page-hero h1 { font-size:2rem; } .page-hero p { font-size:1rem; } }
+    .page-hero {
+      min-height: 60vh;
+      background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('assets/images/GLAFrontPage.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-start;
+      color: #fff;
+      margin-top: 90px;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .page-hero .breadcrumb {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      color: #fff;
+      display: block;
+      text-align: left;
+    }
+
+    .page-hero .breadcrumb a {
+      color: #fff;
+    }
+
+    .page-hero .breadcrumb span {
+      color: rgba(255, 255, 255, .6);
+    }
+
+    .page-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: #fff;
+      text-align: left;
+    }
+
+    .page-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      color: #fff;
+      text-align: left;
+      width: 100%;
+    }
+
+    @media (max-width:768px) {
+      .page-hero {
+        min-height: 60vh;
+      }
+
+      .page-hero h1 {
+        font-size: 2rem;
+      }
+
+      .page-hero p {
+        font-size: 1rem;
+      }
+    }
 
     /* ---------- Footer ---------- */
-    footer { background:#111; color:#fff; padding:60px 0 20px; }
-    .footer-content { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:40px; margin-bottom:40px; }
-    .footer-links h4, .footer-contact h4, .footer-social h4 { font-size:1.2rem; margin-bottom:20px; color:#fff; }
-    .footer-links ul li { margin-bottom:10px; }
-    .footer-links ul li a { color:#fff; transition:color .3s; }
-    .footer-links ul li a:hover { color:darkgoldenrod; }
-    .social-icons { display:flex; gap:15px; }
-    .social-icons a { color:#000; background:#fff; width:36px; height:36px; border-radius:50%;
-                      display:flex; align-items:center; justify-content:center; transition:bg .3s; }
-    .social-icons a:hover { background:darkgoldenrod; color:#fff; }
-    .copyright { text-align:center; padding-top:20px; border-top:1px solid #333; font-size:.9rem; }
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 60px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-links h4,
+    .footer-contact h4,
+    .footer-social h4 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .footer-links ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+      color: #fff;
+      transition: color .3s;
+    }
+
+    .footer-links ul li a:hover {
+      color: darkgoldenrod;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: #000;
+      background: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: bg .3s;
+    }
+
+    .social-icons a:hover {
+      background: darkgoldenrod;
+      color: #fff;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      font-size: .9rem;
+    }
 
     /* ---------- Button Hover Effects ---------- */
-    section a { transition:all .3s ease; }
-    section a:hover { opacity:0.9; }
+    section a {
+      transition: all .3s ease;
+    }
+
+    section a:hover {
+      opacity: 0.9;
+    }
 
     /* ---------- Mobile Nav ---------- */
     @media (max-width:768px) {
-      header { padding:12px 0; }
-      .mobile-toggle { display:block; }
-      nav { position:fixed; top:0; right:-250px; width:250px; height:100vh; background:#fff; transition:right .3s; padding-top:70px; z-index:999; box-shadow:-2px 0 8px rgba(0,0,0,.1); }
-      nav.active { right:0; }
-      nav ul { flex-direction:column; gap:20px; padding:20px; }
-      nav ul li a { display:block; padding:10px 0; }
+      header {
+        padding: 12px 0;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #fff;
+        transition: right .3s;
+        padding-top: 70px;
+        z-index: 999;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, .1);
+      }
+
+      nav.active {
+        right: 0;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 10px 0;
+      }
     }
 
     /* ---------- Intro Overlay ---------- */
-    .intro-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.8);
-                     display:flex; align-items:center; justify-content:center; z-index:2000;
-                     backdrop-filter:blur(10px); opacity:1; transition:opacity .5s ease; flex-direction:column; gap:20px; }
-    .intro-overlay.hide { opacity:0; pointer-events:none; }
-    .intro-text { font-size:4rem; font-weight:900; color:#000; text-transform:uppercase;
-                  letter-spacing:2px; text-shadow:0 0 15px rgba(255,215,0,.8),0 0 30px rgba(255,215,0,.6);
-                  animation:pulse 1.5s ease-in-out infinite; }
-    @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.05);opacity:.9} }
-    @media (max-width:768px) { .intro-text { font-size:2.5rem; } }
+    .intro-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      backdrop-filter: blur(10px);
+      opacity: 1;
+      transition: opacity .5s ease;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .intro-overlay.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .intro-text {
+      font-size: 4rem;
+      font-weight: 900;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 15px rgba(255, 215, 0, .8), 0 0 30px rgba(255, 215, 0, .6);
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1
+      }
+
+      50% {
+        transform: scale(1.05);
+        opacity: .9
+      }
+    }
+
+    @media (max-width:768px) {
+      .intro-text {
+        font-size: 2.5rem;
+      }
+    }
 
     /* ---------- Cookie Consent Bar ---------- */
-    .cookie-consent { position:fixed; bottom:0; left:0; width:100%; background:#222; color:#fff; padding:20px;
-                      display:flex; justify-content:space-between; align-items:center; z-index:999;
-                      box-shadow:0 -2px 10px rgba(0,0,0,.3); font-size:.9rem; gap:20px; }
-    .cookie-consent.hidden { display:none; }
-    .cookie-consent-text { flex:1; }
-    .cookie-consent-text a { color:darkgoldenrod; text-decoration:underline; }
-    .cookie-consent-buttons { display:flex; gap:10px; flex-wrap:wrap; }
-    .cookie-btn { padding:10px 20px; border:none; border-radius:5px; cursor:pointer; font-weight:600;
-                  transition:all .3s; }
-    .cookie-accept { background:darkgoldenrod; color:#fff; }
-    .cookie-accept:hover { background:#b8860b; }
-    .cookie-reject { background:#666; color:#fff; }
-    .cookie-reject:hover { background:#555; }
-    @media (max-width:768px) { .cookie-consent { flex-direction:column; align-items:flex-start; gap:15px; } }
+    .cookie-consent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, .3);
+      font-size: .9rem;
+      gap: 20px;
+    }
+
+    .cookie-consent.hidden {
+      display: none;
+    }
+
+    .cookie-consent-text {
+      flex: 1;
+    }
+
+    .cookie-consent-text a {
+      color: darkgoldenrod;
+      text-decoration: underline;
+    }
+
+    .cookie-consent-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .cookie-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all .3s;
+    }
+
+    .cookie-accept {
+      background: darkgoldenrod;
+      color: #fff;
+    }
+
+    .cookie-accept:hover {
+      background: #b8860b;
+    }
+
+    .cookie-reject {
+      background: #666;
+      color: #fff;
+    }
+
+    .cookie-reject:hover {
+      background: #555;
+    }
+
+    @media (max-width:768px) {
+      .cookie-consent {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+    }
   </style>
+
 <body>
 
   <!-- Cookie Consent Bar -->
@@ -128,31 +480,31 @@
   <!-- Header -->
   <header>
     <div class="container">
-        <div class="logo-container">
-            <img src="assets/images/logo.png" alt="Logo" class="logo-img" style="max-height: 50px;">
-            <span class="app-name">GRITLab Africa</span>
-        </div>
-      
-        <button type="button" class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
-        <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About GLA</a></li>
-              <li><a href="team.html">Our Team</a></li>
-              <li><a href="awards.html">Awards &amp; Testimonials</a></li>
-              <li><a href="media.html">Media</a></li>
-              <li><a href="publications.html">Publications</a></li>
-              <li><a href="supporters.html">Supporters</a></li>
-              <li><a href="apply.html" class="cta-btn">Apply Now</a></li>
-            </ul>
-        </nav>
+      <div class="logo-container">
+        <img src="assets/images/logo.png" alt="Logo" class="logo-img" style="max-height: 50px;">
+        <span class="app-name">GRITLab Africa</span>
+      </div>
+
+      <button type="button" class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About GLA</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="awards.html">Awards &amp; Testimonials</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="supporters.html">Supporters</a></li>
+          <li><a href="apply.html" class="cta-btn">Apply Now</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="page-hero">
     <div class="container" style="text-align:left; width:100%;">
-   <!--<div class="breadcrumb">
+      <!--<div class="breadcrumb">
           <a href="index.html">Home</a><span>/</span><span>About</span>
         </div>-->
       <h1>Apply to GRIT Lab Africa</h1>
@@ -164,46 +516,72 @@
   <section style="background:#f9f6f0; padding:80px 0;">
     <div class="container">
       <div style="display:flex; gap:2rem; justify-content:center; flex-wrap:wrap;">
-        <div style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:2.5rem 2rem; max-width:420px; text-align:center;">
+        <div
+          style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:2.5rem 2rem; max-width:420px; text-align:center;">
           <div style="font-size:2.2rem; color:darkgoldenrod; margin-bottom:1rem;"><i class="fa-solid fa-code"></i></div>
-          <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.25rem; margin-bottom:.8rem;">Introduction to Python Programming and Algorithms</h3>
-          <p style="font-size:1rem; color:#444; margin-bottom:1.5rem;">Master foundational programming concepts with Python and essential algorithm design for effective problem solving in various domains.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSciUSl3-FM7N_O_YUxw2OoLv9TRUp1vn4hVm774q47xqfzalg/viewform?usp=header" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:.5rem; background:darkgoldenrod; color:#000; padding:12px 20px; border-radius:5px; font-weight:800; transition:.3s;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Apply</a>
+          <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.25rem; margin-bottom:.8rem;">
+            Introduction to Python Programming and Algorithms</h3>
+          <p style="font-size:1rem; color:#444; margin-bottom:1.5rem;">Master foundational programming concepts with
+            Python and essential algorithm design for effective problem solving in various domains.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSciUSl3-FM7N_O_YUxw2OoLv9TRUp1vn4hVm774q47xqfzalg/viewform?usp=header"
+            target="_blank" rel="noopener"
+            style="display:inline-flex; align-items:center; gap:.5rem; background:darkgoldenrod; color:#000; padding:12px 20px; border-radius:5px; font-weight:800; transition:.3s;"><i
+              class="fa-solid fa-arrow-up-right-from-square"></i> Apply</a>
         </div>
 
-        <div style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:2.5rem 2rem; max-width:420px; text-align:center;">
-          <div style="font-size:2.2rem; color:darkgoldenrod; margin-bottom:1rem;"><i class="fa-solid fa-robot"></i></div>
-          <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.25rem; margin-bottom:.8rem;">Artificial Intelligence and Practical Applications in Africa</h3>
-          <p style="font-size:1rem; color:#444; margin-bottom:1.5rem;">Explore practical applications of artificial intelligence tailored for African contexts, solving real-world challenges.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScLEQ8Zar4Mky3jjmCpDtJQfAdcKuQtZ_cNTvleRSfCwEwX9g/viewform?usp=header" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:.5rem; background:darkgoldenrod; color:#000; padding:12px 20px; border-radius:5px; font-weight:800; transition:.3s;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Apply</a>
+        <div
+          style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:2.5rem 2rem; max-width:420px; text-align:center;">
+          <div style="font-size:2.2rem; color:darkgoldenrod; margin-bottom:1rem;"><i class="fa-solid fa-robot"></i>
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.25rem; margin-bottom:.8rem;">
+            Artificial Intelligence and Practical Applications in Africa</h3>
+          <p style="font-size:1rem; color:#444; margin-bottom:1.5rem;">Explore practical applications of artificial
+            intelligence tailored for African contexts, solving real-world challenges.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScLEQ8Zar4Mky3jjmCpDtJQfAdcKuQtZ_cNTvleRSfCwEwX9g/viewform?usp=header"
+            target="_blank" rel="noopener"
+            style="display:inline-flex; align-items:center; gap:.5rem; background:darkgoldenrod; color:#000; padding:12px 20px; border-radius:5px; font-weight:800; transition:.3s;"><i
+              class="fa-solid fa-arrow-up-right-from-square"></i> Apply</a>
         </div>
 
-        <div style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:2.5rem 2rem; max-width:420px; text-align:center; position:relative; overflow:hidden;">
-          <svg style="position:absolute; bottom:-30px; right:-30px; width:140px; height:140px; opacity:0.06; pointer-events:none;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="48" fill="#1a6eb5"/>
-            <text x="50" y="62" text-anchor="middle" font-size="28" font-weight="900" fill="#f0a500" font-family="Arial, sans-serif">PHIRu</text>
-            <circle cx="50" cy="30" r="14" fill="none" stroke="#f0a500" stroke-width="3"/>
-            <rect x="42" y="22" width="16" height="16" rx="3" fill="#4ab0e8"/>
-            <line x1="50" y1="15" x2="50" y2="44" stroke="#f0a500" stroke-width="2"/>
-            <line x1="35" y1="30" x2="65" y2="30" stroke="#f0a500" stroke-width="2"/>
+        <div
+          style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:2.5rem 2rem; max-width:420px; text-align:center; position:relative; overflow:hidden;">
+          <svg
+            style="position:absolute; bottom:-30px; right:-30px; width:140px; height:140px; opacity:0.06; pointer-events:none;"
+            viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="48" fill="#1a6eb5" />
+            <text x="50" y="62" text-anchor="middle" font-size="28" font-weight="900" fill="#f0a500"
+              font-family="Arial, sans-serif">PHIRu</text>
+            <circle cx="50" cy="30" r="14" fill="none" stroke="#f0a500" stroke-width="3" />
+            <rect x="42" y="22" width="16" height="16" rx="3" fill="#4ab0e8" />
+            <line x1="50" y1="15" x2="50" y2="44" stroke="#f0a500" stroke-width="2" />
+            <line x1="35" y1="30" x2="65" y2="30" stroke="#f0a500" stroke-width="2" />
           </svg>
 
           <div style="font-size:2.2rem; color:darkgoldenrod; margin-bottom:1rem; position:relative; z-index:1;">
             <i class="fa-solid fa-heart-pulse"></i>
           </div>
 
-          <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.25rem; margin-bottom:.8rem; color:#111; position:relative; z-index:1;">Artificial Intelligence for Healthcare Innovation</h3>
+          <h3
+            style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.25rem; margin-bottom:.8rem; color:#111; position:relative; z-index:1;">
+            Artificial Intelligence for Healthcare Innovation</h3>
 
-          <div style="display:inline-flex; align-items:center; gap:6px; background:#f0f7ff; border:1px solid #b5d4f4; border-radius:20px; padding:4px 12px; font-size:0.72rem; font-weight:700; color:#185FA5; margin-bottom:0.9rem; letter-spacing:0.3px; position:relative; z-index:1;">
+          <div
+            style="display:inline-flex; align-items:center; gap:6px; background:#f0f7ff; border:1px solid #b5d4f4; border-radius:20px; padding:4px 12px; font-size:0.72rem; font-weight:700; color:#185FA5; margin-bottom:0.9rem; letter-spacing:0.3px; position:relative; z-index:1;">
             <i class="fa-solid fa-circle-nodes" style="font-size:11px;"></i>
             In partnership with PHIRu &middot; SAMRC/SMU
           </div>
 
-          <div style="width:40px; height:3px; background:darkgoldenrod; border-radius:2px; margin:0 auto 1rem; opacity:0.5; position:relative; z-index:1;"></div>
+          <div
+            style="width:40px; height:3px; background:darkgoldenrod; border-radius:2px; margin:0 auto 1rem; opacity:0.5; position:relative; z-index:1;">
+          </div>
 
-          <p style="font-size:1rem; color:#444; margin-bottom:1.5rem; line-height:1.6; position:relative; z-index:1;">Apply AI to transform healthcare delivery across Africa — from diagnostics and patient data systems to public health interventions and clinical decision support.</p>
+          <p style="font-size:1rem; color:#444; margin-bottom:1.5rem; line-height:1.6; position:relative; z-index:1;">
+            Apply AI to transform healthcare delivery across Africa — from diagnostics and patient data systems to
+            public health interventions and clinical decision support.</p>
 
-          <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:.5rem; background:darkgoldenrod; color:#000; padding:12px 20px; border-radius:5px; font-weight:800; transition:.3s; position:relative; z-index:1;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Apply</a>
+          <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" rel="noopener"
+            style="display:inline-flex; align-items:center; gap:.5rem; background:darkgoldenrod; color:#000; padding:12px 20px; border-radius:5px; font-weight:800; transition:.3s; position:relative; z-index:1;"><i
+              class="fa-solid fa-arrow-up-right-from-square"></i> Apply</a>
         </div>
       </div>
     </div>
@@ -225,14 +603,19 @@
         <div class="footer-contact">
           <h4>Contact</h4>
           <p>Email: <a href="mailto:info@gritlabafrica.org" style="color: #fff;">info@gritlabafrica.org</a></p>
+          <p style="margin-top: 8px;">24 Ditton Ave, Auckland Park, Johannesburg, 2092</p>
         </div>
         <div class="footer-social">
           <h4>Follow Us</h4>
           <div class="social-icons">
-            <a href="https://www.facebook.com/people/GRIT-Lab-Africa/100090859997203/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.youtube.com/@GRITLabAfrica" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.linkedin.com/company/grit-lab-africa/?originalSubdomain=za" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/kingsman_academic_official/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/people/GRIT-Lab-Africa/100090859997203/" target="_blank"
+              title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@GRITLabAfrica" target="_blank" title="YouTube"><i
+                class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/grit-lab-africa/?originalSubdomain=za" target="_blank"
+              title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/kingsman_academic_official/" target="_blank" title="Instagram"><i
+                class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
@@ -244,7 +627,7 @@
 
   <button id="back-to-top" aria-label="Back to top">↑</button>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Intro overlay animation
       const introOverlay = document.querySelector('.intro-overlay');
       if (introOverlay) {
@@ -264,11 +647,11 @@
           cookieConsent.classList.add('hidden');
         }
       }
-      window.acceptCookies = function() {
+      window.acceptCookies = function () {
         localStorage.setItem('cookiesAccepted', 'true');
         document.getElementById('cookieConsent').classList.add('hidden');
       }
-      window.rejectCookies = function() {
+      window.rejectCookies = function () {
         localStorage.setItem('cookiesAccepted', 'false');
         document.getElementById('cookieConsent').classList.add('hidden');
       }
@@ -278,10 +661,10 @@
       const mobileToggle = document.querySelector('.mobile-toggle');
       const nav = document.querySelector('nav');
       if (mobileToggle) {
-        mobileToggle.addEventListener('click', function(e) {
+        mobileToggle.addEventListener('click', function (e) {
           e.stopPropagation();
           nav.classList.toggle('active');
-          
+
           const icon = this.querySelector('i');
           if (nav.classList.contains('active')) {
             icon.classList.remove('fa-bars');
@@ -291,8 +674,8 @@
             icon.classList.add('fa-bars');
           }
         });
-        
-        document.addEventListener('click', function(e) {
+
+        document.addEventListener('click', function (e) {
           if (!nav.contains(e.target) && e.target !== mobileToggle && nav.classList.contains('active')) {
             nav.classList.remove('active');
             const icon = mobileToggle.querySelector('i');
@@ -312,4 +695,5 @@
   </script>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
