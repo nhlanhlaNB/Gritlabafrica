@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patrons, Ambassadors &amp; Mentors - GRIT Lab Africa</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 15px 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      height: 45px;
+      width: auto;
+    }
+
+    .app-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #000;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #222;
+      font-weight: 700;
+      font-size: 13px;
+      transition: color .3s;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      color: darkgoldenrod;
+    }
+
+    .cta-btn {
+      background: darkgoldenrod;
+      color: #fff !important;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background .3s;
+    }
+
+    .cta-btn:hover {
+      background: #b8860b;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: #000;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    /* ---------- Mobile Nav ---------- */
+    @media (max-width:768px) {
+      header {
+        padding: 12px 0;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #fff;
+        transition: right .3s;
+        padding-top: 70px;
+        z-index: 999;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, .1);
+      }
+
+      nav.active {
+        right: 0;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 10px 0;
+      }
+    }
+
+    /* ---------- Intro Overlay ---------- */
+    .intro-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 2000;
+      backdrop-filter: blur(10px);
+      opacity: 1;
+      transition: opacity .5s ease;
+    }
+
+    .intro-overlay.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .intro-text {
+      font-size: 4rem;
+      font-weight: 900;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 15px rgba(255, 215, 0, .8), 0 0 30px rgba(255, 215, 0, .6);
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.05);
+        opacity: .9;
+      }
+    }
+
+    @media (max-width:768px) {
+      .intro-text {
+        font-size: 2.5rem;
+      }
+    }
+
+    /* ---------- Page Hero ---------- */
+    .people-hero {
+      min-height: 60vh;
+      background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('assets/images/GLAFrontPage.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      margin-top: 90px;
+    }
+
+    .people-hero .container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .people-hero-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .people-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .people-hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      color: #fff;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    @media (max-width:768px) {
+      .people-hero {
+        min-height: 60vh;
+      }
+
+      .people-hero h1 {
+        font-size: 2rem;
+      }
+
+      .people-hero p {
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .people-hero .container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* ---------- Filters ---------- */
+    .people-section {
+      padding: 60px 0;
+      background: #fff;
+    }
+
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    .filter-btn {
+      background: #fff;
+      border: 2px solid darkgoldenrod;
+      color: darkgoldenrod;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: .95rem;
+      cursor: pointer;
+      transition: all .3s;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .filter-btn:hover {
+      background: darkgoldenrod;
+      color: #fff;
+    }
+
+    .filter-btn.active {
+      background: darkgoldenrod;
+      color: #fff;
+    }
+
+    /* ---------- People Grid ---------- */
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .person-card {
+      background: #fff;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
+      transition: transform .3s, box-shadow .3s;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #f0f0f0;
+    }
+
+    .person-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(184, 134, 11, .2);
+    }
+
+    .person-card.hidden {
+      display: none;
+    }
+
+    .person-img-placeholder {
+      width: 100%;
+      height: 250px;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #aaa;
+      border-bottom: 1px solid #eee;
+    }
+
+    .person-img-placeholder i {
+      font-size: 3rem;
+      color: darkgoldenrod;
+      opacity: .5;
+    }
+
+    .person-img-placeholder span {
+      font-size: .8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .person-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid #eee;
+    }
+
+    .person-info {
+      padding: 20px 15px;
+    }
+
+    .person-badge {
+      display: inline-block;
+      background: rgba(218, 165, 32, .12);
+      color: darkgoldenrod;
+      font-size: .72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .person-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+      color: #222;
+    }
+
+    .person-role {
+      color: darkgoldenrod;
+      font-size: .9rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .person-org {
+      font-size: .85rem;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .person-desc {
+      font-size: .85rem;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    .section-heading {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1B2B3A;
+      margin-bottom: 12px;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto 45px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 60px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-links h4,
+    .footer-contact h4,
+    .footer-social h4 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .footer-links ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+      color: #fff;
+      transition: color .3s;
+    }
+
+    .footer-links ul li a:hover {
+      color: darkgoldenrod;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: #000;
+      background: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .3s;
+    }
+
+    .social-icons a:hover {
+      background: darkgoldenrod;
+      color: #fff;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      font-size: .9rem;
+    }
+
+    /* ---------- Cookie Consent Bar ---------- */
+    .cookie-consent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, .3);
+      font-size: .9rem;
+      gap: 20px;
+    }
+
+    .cookie-consent.hidden {
+      display: none;
+    }
+
+    .cookie-consent-text {
+      flex: 1;
+    }
+
+    .cookie-consent-text a {
+      color: darkgoldenrod;
+      text-decoration: underline;
+    }
+
+    .cookie-consent-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .cookie-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all .3s;
+    }
+
+    .cookie-accept {
+      background: darkgoldenrod;
+      color: #fff;
+    }
+
+    .cookie-accept:hover {
+      background: #b8860b;
+    }
+
+    .cookie-reject {
+      background: #666;
+      color: #fff;
+    }
+
+    .cookie-reject:hover {
+      background: #555;
+    }
+
+    @media (max-width:768px) {
+      .cookie-consent {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Cookie Consent Bar -->
+  <div class="cookie-consent" id="cookieConsent">
+    <div class="cookie-consent-text">
+      We use cookies to enhance your experience. By continuing to browse, you agree to our use of cookies.
+      <a href="#" onclick="event.preventDefault()">Learn more</a>
+    </div>
+    <div class="cookie-consent-buttons">
+      <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
+      <button class="cookie-btn cookie-reject" onclick="rejectCookies()">Reject</button>
+    </div>
+  </div>
+
+  <!-- Intro overlay -->
+  <div class="intro-overlay">
+    <img src="assets/images/logo.png" alt="GRIT Lab Africa Logo" style="max-height:70px;">
+    <span class="app-name">GRIT Lab Africa</span>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <img src="assets/images/logo.png" alt="GRIT Lab Africa Logo" class="logo-img" style="max-height: 50px;">
+        <span class="app-name">GRITLab Africa</span>
+      </div>
+
+      <button type="button" class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About GLA</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="people.html" class="active">People</a></li>
+          <li><a href="awards.html">Awards &amp; Testimonials</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="supporters.html">Supporters</a></li>
+          <li><a href="apply.html" class="cta-btn">Apply Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="people-hero">
+    <div class="container">
+      <div class="people-hero-text">
+        <h1>Patrons, Ambassadors &amp; Mentors</h1>
+        <p>Meet the distinguished patrons, the ambassadors who have journeyed through GRIT Lab Africa, and the industry
+          experts who mentor our Grit-ers toward excellence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- People Section with Filtering -->
+  <section class="people-section">
+    <div class="container">
+      <h2 class="section-heading">The GRIT Lab Africa Family</h2>
+      <p class="section-sub">Our community is powered by visionary patrons, inspiring ambassadors, and dedicated mentors
+        who shape the next generation of African technologists.</p>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="patron">Patrons</button>
+        <button class="filter-btn" data-filter="ambassador">Ambassadors</button>
+        <button class="filter-btn" data-filter="mentor">Mentors</button>
+      </div>
+
+      <div class="people-grid">
+
+        <!-- ══════════ PATRONS ══════════ -->
+        <div class="person-card" data-category="patron">
+          <div class="person-img-placeholder">
+            <i class="fas fa-user-tie"></i>
+            <span>Photo Coming Soon</span>
+          </div>
+          <div class="person-info">
+            <span class="person-badge">Patron</span>
+            <h3>Prof Adeola Ogechi</h3>
+            <p class="person-role">Distinguished Patron</p>
+            <p class="person-org">Rwanda</p>
+            <p class="person-desc">A distinguished academic leader supporting GRIT Lab Africa's mission to empower young
+              African technologists.</p>
+          </div>
+        </div>
+
+        <div class="person-card" data-category="patron">
+          <div class="person-img-placeholder">
+            <i class="fas fa-user-tie"></i>
+            <span>Photo Coming Soon</span>
+          </div>
+          <div class="person-info">
+            <span class="person-badge">Patron</span>
+            <h3>Prof Sezer</h3>
+            <p class="person-role">Distinguished Patron</p>
+            <p class="person-org">Turkey</p>
+            <p class="person-desc">A visionary academic patron championing innovation and skills development across
+              borders.</p>
+          </div>
+        </div>
+
+        <div class="person-card" data-category="patron">
+          <div class="person-img-placeholder">
+            <i class="fas fa-user-tie"></i>
+            <span>Photo Coming Soon</span>
+          </div>
+          <div class="person-info">
+            <span class="person-badge">Patron</span>
+            <h3>Dr (Tanzania)</h3>
+            <p class="person-role">Distinguished Patron</p>
+            <p class="person-org">Tanzania</p>
+            <p class="person-desc">A respected academic patron from Tanzania supporting GRIT Lab Africa's continental
+              reach.</p>
+          </div>
+        </div>
+
+        <!-- ══════════ AMBASSADORS ══════════ -->
+        <div class="person-card" data-category="ambassador">
+          <div class="person-img-placeholder">
+            <i class="fas fa-user-graduate"></i>
+            <span>Photo Coming Soon</span>
+          </div>
+          <div class="person-info">
+            <span class="person-badge">Ambassador</span>
+            <h3>Suhail Ally</h3>
+            <p class="person-role">GRIT Lab Africa Ambassador</p>
+            <p class="person-org">Software Developer, Dariel · Co-Director GLA · South Africa</p>
+            <p class="person-desc">A GRIT Lab Africa alumnus and co-director who embodies the journey from Grit-er to
+              industry professional.</p>
+          </div>
+        </div>
+
+        <div class="person-card" data-category="ambassador">
+          <div class="person-img-placeholder">
+            <i class="fas fa-user-graduate"></i>
+            <span>Photo Coming Soon</span>
+          </div>
+          <div class="person-info">
+            <span class="person-badge">Ambassador</span>
+            <h3>Thato</h3>
+            <p class="person-role">GRIT Lab Africa Ambassador</p>
+            <p class="person-org">South Africa</p>
+            <p class="person-desc">A proud GRIT Lab Africa alumnus inspiring the next generation of young African
+              builders.</p>
+          </div>
+        </div>
+
+        <!-- ══════════ MENTORS ══════════ -->
+        <div class="person-card" data-category="mentor">
+          <div class="person-img-placeholder">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>Photo Coming Soon</span>
+          </div>
+          <div class="person-info">
+            <span class="person-badge">Mentor</span>
+            <h3>Dr Gamuchirai Mutezo</h3>
+            <p class="person-role">Industry Expert &amp; Mentor</p>
+            <p class="person-org">Industry Expert</p>
+            <p class="person-desc">Industry expert mentoring GRIT Lab Africa students toward excellence.</p>
+          </div>
+        </div>
+
+        <div class="person-card" data-category="mentor">
+          <div class="person-img-placeholder">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>Photo Coming Soon</span>
+          </div>
+          <div class="person-info">
+            <span class="person-badge">Mentor</span>
+            <h3>Dr Juilet Joseph</h3>
+            <p class="person-role">Industry Expert &amp; Mentor</p>
+            <p class="person-org">Industry Expert</p>
+            <p class="person-desc">Industry expert guiding the next generation of African tech talent.</p>
+          </div>
+        </div>
+
+        <div class="person-card" data-category="mentor">
+          <div class="person-img-placeholder">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>Photo Coming Soon</span>
+          </div>
+          <div class="person-info">
+            <span class="person-badge">Mentor</span>
+            <h3>Ms Senzeni Marasela</h3>
+            <p class="person-role">Industry Expert &amp; Mentor</p>
+            <p class="person-org">Industry Expert</p>
+            <p class="person-desc">Industry expert mentoring GRIT Lab Africa students with real-world insight.</p>
+          </div>
+        </div>
+
+        <div class="person-card" data-category="mentor">
+          <div class="person-img-placeholder">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>Photo Coming Soon</span>
+          </div>
+          <div class="person-info">
+            <span class="person-badge">Mentor</span>
+            <h3>Ms CPTx2</h3>
+            <p class="person-role">Industry Expert &amp; Mentor</p>
+            <p class="person-org">Industry Expert</p>
+            <p class="person-desc">Industry expert supporting GRIT Lab Africa's skills development programmes.</p>
+          </div>
+        </div>
+
+        <div class="person-card" data-category="mentor">
+          <div class="person-img-placeholder">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>Photo Coming Soon</span>
+          </div>
+          <div class="person-info">
+            <span class="person-badge">Mentor</span>
+            <h3>Dr Wayne Moodaley</h3>
+            <p class="person-role">Industry Expert &amp; Mentor</p>
+            <p class="person-org">Industry Expert</p>
+            <p class="person-desc">Industry expert mentoring GRIT Lab Africa students toward their goals.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <img src="assets/images/logo.png" alt="GRIT Lab Africa Logo" class="logo-img" style="max-height: 50px;">
+        <div class="footer-links">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="people.html">People</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>Email: <a href="mailto:info@gritlabafrica.org" style="color: #fff;">info@gritlabafrica.org</a></p>
+          <p style="margin-top: 8px;">24 Ditton Ave, Auckland Park, Johannesburg, 2092</p>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/people/GRIT-Lab-Africa/100090859997203/" target="_blank"
+              title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@GRITLabAfrica" target="_blank" title="YouTube"><i
+                class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/grit-lab-africa/?originalSubdomain=za" target="_blank"
+              title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/kingsman_academic_official/" target="_blank" title="Instagram"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>GRIT Lab Africa © 2016-2026 All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      /* ---------- Intro fade-out ---------- */
+      const intro = document.querySelector('.intro-overlay');
+      if (intro) {
+        setTimeout(() => {
+          intro.classList.add('hide');
+          setTimeout(() => intro.remove(), 500);
+        }, 3000);
+      }
+
+      /* ---------- Mobile menu ---------- */
+      const toggle = document.querySelector('.mobile-toggle');
+      const nav = document.querySelector('nav');
+      if (toggle) {
+        toggle.addEventListener('click', e => {
+          e.stopPropagation();
+          nav.classList.toggle('active');
+          const icon = toggle.querySelector('i');
+          icon.classList.toggle('fa-bars');
+          icon.classList.toggle('fa-times');
+        });
+        document.addEventListener('click', e => {
+          if (!nav.contains(e.target) && e.target !== toggle && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            toggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+          }
+        });
+      }
+
+      /* ---------- Filtering ---------- */
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.person-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.getAttribute('data-filter');
+          cards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            card.classList.toggle('hidden', filter !== 'all' && cat !== filter);
+          });
+        });
+      });
+
+      /* ---------- Cookie Consent ---------- */
+      function initCookies() {
+        const cookieConsent = document.getElementById('cookieConsent');
+        const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+        if (cookiesAccepted) {
+          cookieConsent.classList.add('hidden');
+        }
+      }
+      window.acceptCookies = function () {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookieConsent').classList.add('hidden');
+      }
+      window.rejectCookies = function () {
+        localStorage.setItem('cookiesAccepted', 'false');
+        document.getElementById('cookieConsent').classList.add('hidden');
+      }
+      initCookies();
+    });
+  </script>
+</body>
+
+</html>
